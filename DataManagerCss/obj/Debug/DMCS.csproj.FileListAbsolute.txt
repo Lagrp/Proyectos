@@ -1,0 +1,33 @@
+d:\documents\visual studio 2015\Projects\DMPrueba\DMCS\bin\Debug\DMCS.dll
+d:\documents\visual studio 2015\Projects\DMPrueba\DMCS\bin\Debug\DMCS.pdb
+d:\documents\visual studio 2015\Projects\DMPrueba\DMCS\obj\Debug\DMCS.dll
+d:\documents\visual studio 2015\Projects\DMPrueba\DMCS\obj\Debug\DMCS.pdb
+d:\documents\visual studio 2015\Projects\DMPrueba\DMCS\obj\Debug\DMCS.csprojResolveAssemblyReference.cache
+D:\Documents\LAGRP SOFT\Projects\DMPrueba\DMCS\bin\Debug\DMCS.dll
+D:\Documents\LAGRP SOFT\Projects\DMPrueba\DMCS\bin\Debug\DMCS.pdb
+D:\Documents\LAGRP SOFT\Projects\DMPrueba\DMCS\obj\Debug\DMCS.csprojResolveAssemblyReference.cache
+D:\Documents\LAGRP SOFT\Projects\DMPrueba\DMCS\obj\Debug\DMCS.dll
+D:\Documents\LAGRP SOFT\Projects\DMPrueba\DMCS\obj\Debug\DMCS.pdb
+D:\Documents\LAGRP SOFT\DataManagerCss\bin\Debug\DMCS.dll.config
+D:\Documents\LAGRP SOFT\DataManagerCss\bin\Debug\DMCS.dll
+D:\Documents\LAGRP SOFT\DataManagerCss\bin\Debug\DMCS.pdb
+D:\Documents\LAGRP SOFT\DataManagerCss\obj\Debug\DMCS.dll
+D:\Documents\LAGRP SOFT\DataManagerCss\obj\Debug\DMCS.pdb
+D:\Documents\LAGRP SOFT\DataManagerCss\obj\Debug\DMCS.csprojResolveAssemblyReference.cache
+D:\Documents\LAGRP SOFT\DataManagerCss\bin\Debug\MySql.Data.dll
+D:\Documents\LAGRP SOFT\DataManagerCss\bin\Debug\MySql.Data.xml
+D:\Documents\LAGRP Soft\Proyectos\DataManagerCss\obj\Debug\DMCS.csproj.CoreCompileInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\DataManagerCss\obj\Debug\DMCS.dll
+D:\Documents\LAGRP Soft\Proyectos\DataManagerCss\obj\Debug\DMCS.pdb
+D:\Documents\LAGRP Soft\Proyectos\DataManagerCss\bin\Debug\DMCS.dll.config
+D:\Documents\LAGRP Soft\Proyectos\DataManagerCss\bin\Debug\DMCS.dll
+D:\Documents\LAGRP Soft\Proyectos\DataManagerCss\bin\Debug\DMCS.pdb
+D:\Documents\LAGRP Soft\Proyectos\DataManagerCss\obj\Debug\DMCS.csproj.CopyComplete
+D:\Documentos\LAGRP Soft\Proyectos\DataManagerCss\bin\Debug\DMCS.dll.config
+D:\Documentos\LAGRP Soft\Proyectos\DataManagerCss\bin\Debug\DMCS.dll
+D:\Documentos\LAGRP Soft\Proyectos\DataManagerCss\bin\Debug\DMCS.pdb
+D:\Documentos\LAGRP Soft\Proyectos\DataManagerCss\obj\Debug\DMCS.csproj.CoreCompileInputs.cache
+D:\Documentos\LAGRP Soft\Proyectos\DataManagerCss\obj\Debug\DMCS.csproj.CopyComplete
+D:\Documentos\LAGRP Soft\Proyectos\DataManagerCss\obj\Debug\DMCS.dll
+D:\Documentos\LAGRP Soft\Proyectos\DataManagerCss\obj\Debug\DMCS.pdb
+D:\Documentos\LAGRP Soft\Proyectos\DataManagerCss\obj\Debug\DMCS.csproj.AssemblyReference.cache

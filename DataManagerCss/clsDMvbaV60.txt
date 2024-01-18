@@ -1,0 +1,601 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+END
+Attribute VB_Name = "clsDMvbaV60"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Option Explicit
+'Option Base 1
+
+
+'Variables publicas
+
+Public Enum emTipoDato
+    tdTexto
+    tdNumerico
+    tdFecha_mm_dd_aa
+    tdCriterio1
+End Enum
+
+Public Enum emTConecc
+    tc_OLDB
+    tc_ODBC
+    tc_SQL
+    tc_MySQL
+    tc_Excel
+    tc_Texto
+End Enum
+
+Public Enum emComandoSQL
+    SELECCION
+    INSERTA
+    ACTUALIZA
+    BORRA
+End Enum
+
+Public Enum emPredicadoSQL
+    TODO
+    LOS_PRIMEROS_10
+    DISTINTOS
+    DISTINTOS_TODO
+End Enum
+
+Public Enum emOperadorSQL
+    Ninguno
+    SUMA
+    RESTA
+    MULTIPLICACION
+    DIVISION
+    PROMEDIO
+    CUENTA
+    MINIMO
+    MAXIMO
+End Enum
+    
+Public Enum emSelectorSQL
+    Ninguno         '0
+    ES_Y            '1
+    ES_O            '2
+    ES_IGUAL_A      '3
+    NO_IGUAL_A      '4
+    SI_CONTIENE     '5
+    NO_CONTIENE     '6
+    MAYOR_QUE       '7
+    MENOR_QUE       '8
+    MAYOR_IGUAL_QUE '9
+    MENOR_IGUAL_QUE '10
+    COMIENZA_POR    '11
+    NO_COMIENZA_POR '12
+    TERMINA_POR     '13
+    NO_TERMINA_POR  '14
+    ES_ENTRE        '15
+End Enum
+
+Public Enum emOrdenSQL
+    Ninguno
+    ASENDENTE
+    DESENDENTE
+End Enum
+
+
+
+'variables privadas
+
+'Tipo Datos privadas
+Private Type td_CampoBD
+    mNombre As String
+    Valor() As String
+    TipoDato As Integer
+End Type
+
+Private Type td_TablaBD
+    mNombre As String
+    mCampos() As td_CampoBD
+End Type
+
+Private cnnADODB As ADODB.Connection
+Private mTConec As emTConecc
+Private mTabla() As td_TablaBD
+Private mConecActiva As Boolean
+Private nC As Integer ' numero de campos
+Private nT As Integer 'numero tablas
+Private nV As Integer 'numero Valores
+
+
+Private Const nClase As String = "clsDMvbaV60"
+
+'PROPIEDADES PUBLICAS
+
+Property Get NCampos() As Integer
+    
+End Property
+
+Property Get NTablas() As Integer
+    'N°Registros = UBound(Tablas)
+End Property
+
+
+'PROCEDIMIENTOS PUBLICOS
+
+'Provider=Microsoft.ACE.OLEDB.12.0;Password="";User ID=Admin;Data Source=C:\Users\larp\Documents\LR\Programacion\Data\SESA_V6.accdb;Mode=Share Deny Write;Extended Properties="";Jet OLEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Database Password="";Jet OLEDB:Engine Type=6;Jet OLEDB:Database Locking Mode=0;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False;Jet OLEDB:Limited DB Caching=False;Jet OLEDB:Bypass ChoiceField Validation=False
+'Provider=MSDASQL.1;Persist Security Info=True;Extended Properties=&quot;DSN=MS Access Database;DBQ=D:\Nuevo Microsoft Access Base de datos.accdb;DefaultDir=D:;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;&quot;;Initial Catalog=D:\Nuevo Microsoft Access Base de datos.accdb
+
+   
+Public Sub ConeccionBD(ByVal NombreBaseDatos As String, _
+                        Optional TipoConeccion As emTConecc = emTConecc.tc_OLDB, _
+                        Optional Clave As String = "", _
+                        Optional Usuario As String = "Admin")
+    Dim mCadC As String
+    
+    On Error GoTo cError
+    mTConec = TipoConeccion
+    
+    Select Case mTConec
+        Case emTConecc.tc_OLDB
+            mCadC = "Provider=Microsoft.ACE.OLEDB.12.0;Password=" & Clave & ";User ID=" & Usuario & ";Data Source=" & NombreBaseDatos '& ";Mode=Share Deny Write;Extended Properties="";Jet OLEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Database Password="";Jet OLEDB:Engine Type=6;Jet OLEDB:Database Locking Mode=0;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False;Jet OLEDB:Limited DB Caching=False;Jet OLEDB:Bypass ChoiceField Validation=False"
+        Case emTConecc.tc_SQL
+            mCadC = "Provider=MSDASQL.1;Persist Security Info=True;Extended Properties=&quot;DSN=MS Access Database;DBQ=D:\Nuevo Microsoft Access Base de datos.accdb;DefaultDir=D:;DriverId=25;FIL=MS Access;MaxBufferSize=2048;PageTimeout=5;&quot;;Initial Catalog=D:\Nuevo Microsoft Access Base de datos.accdb"
+        Case emTConecc.tc_Texto
+            mCadC = "TEXT;" & NombreBaseDatos
+    End Select
+    Set cnnADODB = New ADODB.Connection
+    cnnADODB.Open mCadC
+    mConecActiva = True
+    Exit Sub
+cError:
+    mConecActiva = False
+    TErrores "ConeccionBD"
+End Sub
+
+Public Sub DataSetBD(Optional ByVal Tabla As String = "", _
+                        Optional ByVal Campo As String = "", _
+                        Optional ByVal Valor As String = "", _
+                        Optional TDato As emTipoDato = emTipoDato.tdTexto, _
+                        Optional id As Integer = 0)
+                        
+    Dim t As Integer
+    Dim i As Integer
+    
+    On Error Resume Next
+    
+    If Tabla = "" And Campo = "" And Valor = "" Then
+        BorrarMatriz
+    Else
+        If Tabla <> "" Then
+            nT = 0
+            
+            MsgBox nT
+            ReDim Preserve mTabla(nT)
+            For i = 0 To nT
+                'If mTabla(i).mNombre = Tabla Then 'MsgBox mTabla(i).mNombre
+            
+            Next
+            
+            '
+           ' mTabla(nT).mNombre = Tabla
+            'nC = 0
+        End If
+        Exit Sub
+    End If
+            If Campo <> "" Then
+                ReDim Preserve mTabla(nT).mCampos(nC)
+                mTabla(nT).mCampos(nC).mNombre = Campo
+                mTabla(nT).mCampos(nC).TipoDato = TDato
+                If Valor <> "" Then
+                    ReDim Preserve mTabla(nT).mCampos(nC).Valor(nV)
+                    mTabla(nT).mCampos(nC).Valor(nV) = tdValor(Valor, TDato)
+                    nV = nV + 1
+                End If
+                nC = nC + 1
+            End If
+            nT = nT + 1
+   
+End Sub
+
+Public Sub EditarBD(Optional Criterio As String = "", _
+                Optional Selector As emSelectorSQL = emSelectorSQL.ES_IGUAL_A, _
+                Optional ValorC As String = "")
+
+
+
+
+MsgBox fConsultaSQL(ACTUALIZA, Criterio, ValorC, Selector)
+
+
+End Sub
+
+Public Sub BorrarBD(Optional Criterio As String = "", _
+                Optional Selector As emSelectorSQL = emSelectorSQL.ES_IGUAL_A, _
+                Optional ValorC As String = "")
+
+
+
+MsgBox fConsultaSQL(BORRA, Criterio, ValorC, Selector)
+
+End Sub
+
+
+Public Sub InsertarBD()
+
+    MsgBox fConsultaSQL(INSERTA)
+
+End Sub
+
+
+Public Function LeerBD(Optional ByVal Tabla As String = "", _
+                        Optional ByVal Campo As String = "", _
+                        Optional Criterio As String = "", _
+                        Optional Selector As emSelectorSQL = emSelectorSQL.ES_IGUAL_A, _
+                        Optional vCriterio As String = "", _
+                        Optional Ordenado As emOrdenSQL = emOrdenSQL.Ninguno, _
+                        Optional CampoORD As String = "", _
+                        Optional Predicado As emPredicadoSQL = emPredicadoSQL.TODO, _
+                        Optional Operador As emOperadorSQL = emOperadorSQL.Ninguno, _
+                        Optional NombreBD As String = "", _
+                        Optional TDato As emTipoDato = emTipoDato.tdTexto, _
+                        Optional id As Integer = 0) As String
+                        
+                        Dim i As Integer
+                        Dim iC As Integer
+                        
+    If Tabla <> "" And Campo <> "" Then DataSetBD Tabla, Campo
+    EjecutarSQL fConsultaSQL(SELECCION, Criterio, vCriterio, Selector, Predicado, Operador, Ordenado, CampoORD), NombreBD
+    
+    'For i = 1 To nC
+     '   If mTabla(1).mCampos(i).mNombre = Campo Then
+      '      iC = i
+     '       Exit For
+     '   End If
+   ' Next
+    
+   ' LeerBD = mTabla(1).mCampos(iC).Valor(Id)
+End Function
+
+
+
+'PROCEDIMEINTOS PRIVADOS
+
+'********************************************************************
+'***** Funciones MIembro Privadas - para manejo de lenguaje SQL *****
+'********************************************************************
+'Comandos DLL
+'CREATE  Utilizado para crear nuevas tablas, campos e Ã­ndices
+'DROP    Empleado para eliminar tablas e Ã­ndices
+'ALTER   Utilizado para modificar las tablas agregando campos o cambiando la definiciÃ³n de los campos.
+
+'Comandos DML
+'SELECT  Utilizado para consultar registros de la base de datos que satisfagan un criterio determinado
+'INSERT  Utilizado para cargar lotes de datos en la base de datos en una Ãºnica operaciÃ³n.
+'UPDATE  Utilizado para modificar los valores de los campos y registros especificados
+'DELETE  Utilizado para eliminar registros de una tabla de una base de datos
+
+Private Function fConsultaSQL(cmmSQL As emComandoSQL, _
+                            Optional CampoC As String = "", _
+                            Optional ValorC As String = "", _
+                            Optional Selector As emSelectorSQL = emSelectorSQL.ES_IGUAL_A, _
+                            Optional Predicado As emPredicadoSQL = emPredicadoSQL.TODO, _
+                            Optional Operador As emOperadorSQL = emOperadorSQL.Ninguno, _
+                            Optional Ordenado As emOrdenSQL = emOrdenSQL.Ninguno, _
+                            Optional CampoORD As String = "") As String
+
+'SELECT campos FROM tabla WHERE criterio GROUP BY campos del grupo
+'INSERT INTO Tabla (campo1, campo2, .., campoN) VALUES (valor1, valor2, ..., valorN)
+'UPDATE Tabla SET Campo1=Valor1, Campo2=Valor2, ... CampoN=ValorN WHERE Criterio;
+'DELETE Tabla.* FROM Tabla WHERE criterio
+                            
+    Dim mCmmSQL As String
+    Dim nCampoSQL As String
+    
+    nCampoSQL = fCampoSQL(cmmSQL)
+    Select Case cmmSQL
+        Case emComandoSQL.SELECCION: mCmmSQL = "SELECT " & fPredicadoSQL(Predicado) & fOperadorSQL(Operador, nCampoSQL) & " FROM " & fTablaSQL & " " & fClausulaSQL(CampoC, Selector, ValorC) & " " & fOrdenSQl(Ordenado, CampoORD)
+        Case emComandoSQL.ACTUALIZA: mCmmSQL = "UPDATE " & nCampoSQL & fClausulaSQL(CampoC, Selector, ValorC)
+        Case emComandoSQL.BORRA: mCmmSQL = "DELETE *.* FROM " & mTabla(1).mNombre & fClausulaSQL(CampoC, Selector, ValorC)
+        Case emComandoSQL.INSERTA: mCmmSQL = "INSERT INTO " & nCampoSQL
+        Case Else: mCmmSQL = ""
+    End Select
+    fConsultaSQL = mCmmSQL
+End Function
+
+Private Function fPredicadoSQL(TPred As emPredicadoSQL) As String
+    'ALL         Devuelve todos los campos de la tabla
+    'TOP         Devuelve un determinado número de registros de la tabla
+    'DISTINCT    Omite los registros cuyos campos seleccionados coincidan totalmente
+    'DISTINCTROW Omite los registros duplicados basandose en la totalidad del registro y no sólo en los campos seleccionados.
+    
+    Dim myTPred As String
+            
+    Select Case TPred
+        Case emPredicadoSQL.TODO: myTPred = " "
+        Case emPredicadoSQL.LOS_PRIMEROS_10:   myTPred = " TOP 10 "
+        Case emPredicadoSQL.DISTINTOS: myTPred = " DISTINCT "
+        Case emPredicadoSQL.DISTINTOS_TODO: myTPred = " DISTINCTROW "
+        Case Else: myTPred = " "
+    End Select
+    fPredicadoSQL = myTPred
+End Function
+
+Private Function fOperadorSQL(nOperador As emOperadorSQL, nCampo As String) As String
+    Dim myOP As String
+    
+    Select Case nOperador
+        Case emOperadorSQL.SUMA: myOP = "Sum(" & nCampo & ") AS CampoSUMA"
+        Case emOperadorSQL.CUENTA: myOP = "Count(" & nCampo & ") AS CampoCUENTA"
+        Case emOperadorSQL.MAXIMO: myOP = "Max(" & nCampo & ") AS CampoMAXIMO"
+        Case emOperadorSQL.MINIMO: myOP = "Min(" & nCampo & ") AS CampoMINIMO"
+        Case emOperadorSQL.PROMEDIO: myOP = "Avg(" & nCampo & ") AS CampoPROMEDIO"
+        Case emOperadorSQL.RESTA:
+        Case emOperadorSQL.DIVISION:
+        Case emOperadorSQL.MULTIPLICACION:
+        Case Else: myOP = nCampo
+    End Select
+    fOperadorSQL = myOP
+End Function
+
+Private Function fClausulaSQL(nCriterio As String, Selector As emSelectorSQL, nValor As String) As String
+    Dim mySel As String
+    Select Case Selector
+        Case emSelectorSQL.Ninguno: mySel = nCriterio '0
+        Case emSelectorSQL.ES_Y: mySel = "((" & nCriterio & ") AND (" & nValor & "))" '1
+        Case emSelectorSQL.ES_O: mySel = "((" & nCriterio & ") OR (" & nValor & "))" '2
+        Case emSelectorSQL.ES_IGUAL_A: mySel = nCriterio & " = '" & nValor & "'" '3
+        Case emSelectorSQL.NO_IGUAL_A: mySel = "NOT ( " & nCriterio & " = '" & nValor & "')" '4
+        Case emSelectorSQL.SI_CONTIENE: mySel = nCriterio & " LIKE '*" & nValor & "*'" '5
+        Case emSelectorSQL.NO_CONTIENE: mySel = nCriterio & " NOT (LIKE '*" & nValor & "*')" '6
+        Case emSelectorSQL.MAYOR_QUE: mySel = nCriterio & " > " & nValor '7
+        Case emSelectorSQL.MENOR_QUE: mySel = nCriterio & " < " & nValor '8
+        Case emSelectorSQL.MAYOR_IGUAL_QUE: mySel = nCriterio & " >= " & nValor '9
+        Case emSelectorSQL.MENOR_IGUAL_QUE: mySel = nCriterio & " <= " & nValor '10
+        Case emSelectorSQL.COMIENZA_POR: mySel = nCriterio & " LIKE '" & nValor & "*'" ' 11
+        Case emSelectorSQL.NO_COMIENZA_POR: mySel = nCriterio & "NOT (LIKE '" & nValor & "*')" '12
+        Case emSelectorSQL.TERMINA_POR: mySel = nCriterio & "LIKE '*" & nValor & "'" '13
+        Case emSelectorSQL.NO_TERMINA_POR: mySel = nCriterio & "NOT (LIKE '*" & nValor & "')" '14
+        Case Else: mySel = ""
+    End Select
+    fClausulaSQL = IIf(mySel = "", "", " WHERE " & mySel)
+End Function
+
+Private Function fOrdenSQl(Orden As emOrdenSQL, Campo As String)
+    Dim mOrden As String
+    Dim nCampo As String
+    
+    If Campo = "" Then
+        nCampo = mTabla(1).mNombre & mTabla(1).mCampos(1).mNombre
+    Else
+        nCampo = Campo
+    End If
+    Select Case Orden
+        Case emOrdenSQL.ASENDENTE
+            mOrden = "ORDER BY " & nCampo & " ASC"
+        Case emOrdenSQL.DESENDENTE
+            mOrden = "ORDER BY " & nCampo & " DESC"
+        Case Else
+            mOrden = ""
+    End Select
+    fOrdenSQl = mOrden
+End Function
+
+Private Function fTablaSQL() As String
+    Dim t As Integer
+    Dim c As Integer
+    Dim mCSQL As String
+    
+    If nT > 1 Then
+        For t = 1 To nT
+            mCSQL = mCSQL & mTabla(t).mNombre & IIf(mCSQL = "", " INNER JOIN ", " ON ")
+        Next
+    Else
+        mCSQL = mTabla(nT).mNombre
+    End If
+    fTablaSQL = mCSQL
+End Function
+
+Private Function fCampoSQL(cmmSQL As emComandoSQL) As String
+    Dim mCSQL As String
+    Dim mVSQL As String
+    Dim t As Integer
+    Dim c As Integer
+    
+    Select Case cmmSQL
+        Case emComandoSQL.SELECCION:
+            For t = 0 To UBound(mTabla)
+                For c = 0 To UBound(mTabla(t).mCampos)
+                    mCSQL = mCSQL & IIf(mCSQL = "", "", ", ") & mTabla(t).mNombre & "." & mTabla(t).mCampos(c).mNombre
+                Next
+            Next
+        Case emComandoSQL.INSERTA:
+            For c = 0 To UBound(mTabla(1).mCampos)
+                mCSQL = mCSQL & IIf(mCSQL = "", "", ", ") & mTabla(1).mCampos(c).mNombre
+                mVSQL = mVSQL & IIf(mVSQL = "", "", ", ") & mTabla(1).mCampos(c).Valor(c)
+            Next
+            mCSQL = mTabla(1).mNombre & "(" & mCSQL & ") VALUES (" & mVSQL & ")"
+        Case emComandoSQL.ACTUALIZA:
+            For c = 0 To UBound(mTabla(1).mCampos)
+                mCSQL = mCSQL & IIf(mCSQL = "", "", ", ") & mTabla(1).mCampos(c).mNombre & " = " & mTabla(1).mCampos(c).Valor(c)
+            Next
+            mCSQL = mTabla(1).mNombre & " SET " & mCSQL
+        Case Else
+            mCSQL = ""
+    End Select
+    fCampoSQL = mCSQL
+End Function
+
+Private Function tdValor(ByVal Valor As String, ByVal td As emTipoDato) As String
+    Select Case td
+        Case emTipoDato.tdTexto
+            tdValor = "'" & Valor & "'"
+        Case emTipoDato.tdNumerico
+            tdValor = Val(Valor)
+        Case emTipoDato.tdFecha_mm_dd_aa
+            tdValor = "#" & Valor & "#"
+        Case emTipoDato.tdCriterio1
+            tdValor = Valor
+    End Select
+End Function
+
+'********************************************
+'***** Procedimewintos Miembro Privados *****
+'********************************************
+
+Private Sub EjecutarSQL(ByVal TextoSQL As String, ByVal nNombreBD As String)
+    Dim rstADODB As ADODB.Recordset
+    Dim i As Integer
+    Dim y As Integer
+    
+     MsgBox TextoSQL
+    Exit Sub
+   ' On Error GoTo cError
+
+    If nNombreBD <> "" Then ConeccionBD nNombreBD
+    Set rstADODB = New ADODB.Recordset
+    With rstADODB
+        .Open Source:=TextoSQL, ActiveConnection:=cnnADODB, CursorType:=adOpenKeyset ', LockType:=adLockOptimistic
+        'nN°Reg = IIf(.RecordCount < 1, 0, .RecordCount)
+        '********************Carga de la Matriz DB ********************************
+        If .RecordCount > 0 Then
+            BorrarMatriz
+            .MoveFirst
+            Do While .BOF = True
+                y = y + 1
+                For i = 0 To .Fields.Count - 1
+                    DataSetBD Campo:=.Fields(i).Name, Valor:=.Fields(i).Value
+                    'Tablas(1).mCampos(i).mNombre =
+                    'Tablas(1).mCampos(i).Valor(y) =
+                Next
+                .MoveNext
+            Loop
+        End If
+        
+        
+             
+     '       If (.EOF = True And .BOF = True) Or Id > nN°Reg Then
+     ''           nMatch = False
+     '           lSql = ""
+     '       Else
+      '          nMatch = True
+       '         If Id > 0 And Id <= nN°Reg Then
+        '            i = 0
+        '            .MoveFirst
+        '            Do While Not .BOF
+       '                 If i = Id - 1 Then Exit Do
+        '                .MoveNext
+      '  '                i = i + 1
+      '              Loop
+       '         End If
+      '          lSql = CStr(.Fields(Campo).Value)
+      '      End If
+     '       .Close
+     '   End If
+
+        
+        
+        
+        
+        
+        
+    End With
+    Set rstADODB = Nothing
+    Exit Sub
+cError:
+    
+    TErrores "fEjecutarSQL" 'If nMsgError = True Then MsgBox Err.Description, Title:="clsDM3vba:EjecutarSQL"
+    Set rstADODB = Nothing
+End Sub
+
+Private Sub TErrores(Modulo As String)
+    'nMatch = False
+    'nN°Reg = 0
+   ' nIdError = Err.Number
+   ' nMsgError = cMsgError
+   ' If nMsgError = True Then
+    MsgBox Err.Number & ":: " & Err.Description, Title:=nClase & ":" & Modulo
+End Sub
+
+Private Sub BorrarMatriz()
+    Dim i As Integer
+    Dim y As Integer
+    
+    For i = 0 To nT
+        For y = 0 To nC
+            Erase mTabla(i).mCampos(y).Valor
+        Next
+        Erase mTabla(nT).mCampos
+    Next
+    Erase mTabla
+    nT = 0
+    nC = 0
+    nV = 0
+End Sub
+
+Private Sub Class_Initialize()
+    nT = 0
+    nC = 0
+    nV = 0
+    mConecActiva = False
+End Sub
+
+Private Sub Class_Terminate()
+    If nT > 0 Then BorrarMatriz
+    If mConecActiva = True Then
+        cnnADODB.Close
+        Set cnnADODB = Nothing
+    End If
+End Sub
+
+
+'vate Function EjecutarSQL(ByVal TextoSQL As String, _
+'                        Optional ByVal Campo As String = "", _
+'                        Optional ByVal NombreBD As String = "", _
+ '                       Optional ByVal Id As Integer = 0) As String
+                        
+ '   Dim rstADODB As ADODB.Recordset
+  '  Dim lSql As String
+   ' Dim i As Integer
+
+  '  On Error GoTo cError
+    'MsgBox TextoSQL
+  '  If NombreBD <> "" Then ConeccionBD NombreBD
+  '  Set rstADODB = New ADODB.Recordset
+  '  With rstADODB
+    '    If Campo = "" And TextoSQL <> "" Then
+    '        .Open Source:=TextoSQL, ActiveConnection:=cnnADODB, CursorType:=adOpenDynamic, Options:=adCmdText 'adCmdTable '', LockType:=adLockOptimistic
+    '        nMatch = False
+     '       lSql = ""
+    '    ElseIf TextoSQL <> "" And Campo <> "" Then
+     '       .Open Source:=TextoSQL, ActiveConnection:=cnnADODB, CursorType:=adOpenKeyset ', LockType:=adLockOptimistic
+     '       nN°Reg = IIf(.RecordCount < 1, 0, .RecordCount)
+     '       If (.EOF = True And .BOF = True) Or Id > nN°Reg Then
+     ''           nMatch = False
+     '           lSql = ""
+     '       Else
+      '          nMatch = True
+       '         If Id > 0 And Id <= nN°Reg Then
+        '            i = 0
+        '            .MoveFirst
+        '            Do While Not .BOF
+       '                 If i = Id - 1 Then Exit Do
+        '                .MoveNext
+      '  '                i = i + 1
+      '              Loop
+       '         End If
+      '          lSql = CStr(.Fields(Campo).Value)
+      '      End If
+     '       .Close
+     '   End If
+    'End With
+   ' EjecutarSQL = lSql
+   ' Set rstADODB = Nothing
+   ' Exit Function
+'cError:
+  '  nMatch = False
+   ' EjecutarSQL = ""
+  ' TErrores "EjecutarSQL" 'If nMsgError = True Then MsgBox Err.Description, Title:="clsDM3vba:EjecutarSQL"
+   ' Set rstADODB = Nothing
+'End Function
+
+
+
+

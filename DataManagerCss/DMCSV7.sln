@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMCSV7", "DMCSV7.csproj", "{8F57E45F-EFE4-4E5B-834B-FDF94433951C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMCS", "DMCS.csproj", "{C698D0BD-091D-4CA4-B1DC-0B160EC758D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F57E45F-EFE4-4E5B-834B-FDF94433951C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F57E45F-EFE4-4E5B-834B-FDF94433951C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F57E45F-EFE4-4E5B-834B-FDF94433951C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F57E45F-EFE4-4E5B-834B-FDF94433951C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C698D0BD-091D-4CA4-B1DC-0B160EC758D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C698D0BD-091D-4CA4-B1DC-0B160EC758D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C698D0BD-091D-4CA4-B1DC-0B160EC758D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C698D0BD-091D-4CA4-B1DC-0B160EC758D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F87CB6D6-1579-48A8-A585-ED76ABF7953A}
+	EndGlobalSection
+EndGlobal
