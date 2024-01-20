@@ -1,0 +1,211 @@
+﻿<Window x:Class="Sgcm.UI.Desktop.Vistas.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:VM="clr-namespace:Sgcm.UI.Desktop.VistaModelo"
+        xmlns:WpfCtrls="clr-namespace:WpfCtrls;assembly=WpfCtrls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="Sistema de Gestion Consultorio de la Mujer"
+        Width="800"
+        Height="600"
+        Icon="/Sgcm.UI.Desktop;component/Recursos/Iconos/CMico40X40.ico"
+        WindowState="Maximized"
+        mc:Ignorable="d">
+
+    <Window.DataContext>
+        <VM:MainVM />
+    </Window.DataContext>
+
+    <Window.Background>
+        <ImageBrush ImageSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/Fondo1.png"
+                    Stretch="Fill" />
+    </Window.Background>
+
+    <Grid ShowGridLines="False">
+        <!--#region GRID-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+
+        <!--#region HEADER-->
+        <Grid x:Name="gHeader"
+              Grid.Row="0"
+              Grid.ColumnSpan="3"
+              Background="{StaticResource ColorPantallaHeader}">
+            <!--#region GRID-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition Width="170" />
+                <ColumnDefinition Width="30" />
+            </Grid.ColumnDefinitions>
+            <!--#endregion-->
+            <Image Grid.Column="0"
+                   Margin="0,5,0,5"
+                   Source="/Sgcm.UI.Desktop;component/Recursos/Imagenes/LogoConsultorio_40.png"
+                   Stretch="UniformToFill" />
+            <StackPanel Grid.Column="2"
+                        Orientation="Horizontal">
+                <WpfCtrls:IcoButton x:Name="btMail"
+                                    ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/group_message_32px.png"
+                                    Style="{DynamicResource IcoButtonStyleBody}" />
+                <WpfCtrls:IcoButton x:Name="btChat"
+                                    ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/chat_32px.png"
+                                    Style="{DynamicResource IcoButtonStyleBody}" />
+                <WpfCtrls:IcoButton x:Name="btNotifi"
+                                    ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/bell_32px.png"
+                                    Style="{DynamicResource IcoButtonStyleBody}" />
+            </StackPanel>
+            <WpfCtrls:ChipButton x:Name="chpUsuarioActual"
+                                 Content="{Binding ActiveUserName}"
+                                 Grid.Column="3"
+                                 Margin="5,0,0,0"
+                                 HorizontalContentAlignment="Left"
+                                 Cursor="Hand"
+                                 FontStyle="Oblique"
+                                 ImgAlto="35"
+                                 ImgAncho="35"
+                                 ImgSource="{Binding ActiveUserPhoto}" />
+            <WpfCtrls:IcoToggleButton x:Name="btCalen"
+                                      Grid.Column="4"
+                                      Click="btCalen_Click"
+                                      ImgSource="/Recursos/Imagenes/calendar_32px.png"
+                                      Style="{DynamicResource IcoToggleButtonStyleHeader}" />
+        </Grid>
+        <!--#endregion-->
+
+        <!--#region SIDEBAR-->
+        <Grid x:Name="gSideBar"
+              Grid.Row="1"
+              Grid.Column="0"
+              Width="100"
+              Background="{StaticResource ColorPantallaSection}">
+            <!--#region GRID-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="75" />
+                <RowDefinition />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <!--#endregion-->
+            <WpfCtrls:IcoToggleButton x:Name="btMenu"
+                                      Margin="0,5,5,5"
+                                      HorizontalAlignment="Right"
+                                      Click="btMenu_Click"
+                                      ImgSource="/Recursos/Imagenes/menu_32px.png"
+                                      Style="{DynamicResource IcoToggleButtonStyleHeader}" />
+
+            <StackPanel Grid.Row="2">
+                <WpfCtrls:OptButton x:Name="btPizarra"
+                                    Content="Pizarra"
+                                    Checked="NavView_SelectionChanged"
+                                    ImgSource="/Recursos/Imagenes/presentation_screen_32px.png"
+                                    Style="{DynamicResource OptButtonStyleSection}"
+                                    Tag="Pizarra"
+                                    ToolTip="Pizarra" />
+                <WpfCtrls:OptButton x:Name="btPacientes"
+                                    Content="Pacientes"
+                                    Checked="NavView_SelectionChanged"
+                                    ImgSource="/Recursos/Imagenes/user_injured_32px.png"
+                                    Style="{DynamicResource OptButtonStyleSection}"
+                                    Tag="Pacientes"
+                                    ToolTip="Pacientes" />
+                <WpfCtrls:OptButton x:Name="btAgenda"
+                                    Content="Agenda"
+                                    Checked="NavView_SelectionChanged"
+                                    ImgSource="/Recursos/Imagenes/address_book_32px.png"
+                                    Style="{DynamicResource OptButtonStyleSection}"
+                                    Tag="Agenda"
+                                    ToolTip="Agenda" />
+                <WpfCtrls:OptButton x:Name="btGestion"
+                                    Content="Gestión"
+                                    Checked="NavView_SelectionChanged"
+                                    ImgSource="/Recursos/Imagenes/accounting_32px.png"
+                                    Style="{DynamicResource OptButtonStyleSection}"
+                                    Tag="Gestión"
+                                    ToolTip="Gestion" />
+                <WpfCtrls:OptButton x:Name="btReportes"
+                                    Content="Reportes"
+                                    Checked="NavView_SelectionChanged"
+                                    ImgSource="/Recursos/Imagenes/combo_chart_32px.png"
+                                    Style="{DynamicResource OptButtonStyleSection}"
+                                    Tag="Reportes"
+                                    ToolTip="Reportes" />
+                <WpfCtrls:OptButton x:Name="btCuenta"
+                                    Content="Mi Cuenta"
+                                    Checked="NavView_SelectionChanged"
+                                    ImgSource="/Recursos/Imagenes/administrative_tools_32px.png"
+                                    Style="{DynamicResource OptButtonStyleSection}"
+                                    Tag="MiCuenta"
+                                    ToolTip="Mi Cuenta" />
+            </StackPanel>
+            <WpfCtrls:ImgButton x:Name="btLogoff"
+                                Content="Cerrar Sesión"
+                                Grid.Row="3"
+                                Margin="3,0,-1,0"
+                                Padding="12,0,0,0"
+                                HorizontalContentAlignment="Left"
+                                Click="btLogoff_Click"
+                                ImgSource="/Recursos/Imagenes/shutdown_32px.png"
+                                Style="{DynamicResource ImgButtonStyleFlat}"
+                                Tag="CerrarSesion" />
+        </Grid>
+        <!--#endregion-->
+
+        <!--#region RIGTHBAR-->
+        <Grid x:Name="gRBar"
+              Grid.Row="1"
+              Grid.Column="2"
+              Width="200"
+              HorizontalAlignment="Right"
+              Background="{StaticResource ColorPantallaSection}"
+              Visibility="Collapsed">
+            <!--#region GRID-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="180" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!--#endregion-->
+            <Calendar x:Name="calendar"
+                      Grid.Row="1"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Top"
+                      HorizontalContentAlignment="Stretch" />
+        </Grid>
+        <!--#endregion-->
+
+        <Frame x:Name="frWrap"
+               Grid.Row="1"
+               Grid.Column="1"
+               NavigationUIVisibility="Hidden" />
+
+        <!--#region ESTATUSBAR-->
+        <StatusBar Name="stbar"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="3"
+                   Background="{StaticResource ColorPantallaFooter}">
+            <StatusBarItem>
+                <TextBlock>Estado Usuario</TextBlock>
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem Padding="0,0,0,0"
+                           HorizontalContentAlignment="Left"
+                           VerticalContentAlignment="Center">
+                <Label x:Name="txtEstUser"
+                       Content="activo" />
+            </StatusBarItem>
+        </StatusBar>
+        <!--#endregion-->
+    </Grid>
+</Window>

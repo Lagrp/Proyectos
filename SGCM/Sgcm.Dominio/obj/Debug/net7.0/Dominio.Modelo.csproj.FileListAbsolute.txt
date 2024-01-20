@@ -1,0 +1,12 @@
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\bin\Debug\net7.0\Dominio.Modelo.deps.json
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\bin\Debug\net7.0\Dominio.Modelo.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\bin\Debug\net7.0\Dominio.Modelo.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Dominio.Modelo.csproj.AssemblyReference.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Dominio.Modelo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Dominio.Modelo.AssemblyInfoInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Dominio.Modelo.AssemblyInfo.cs
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Dominio.Modelo.csproj.CoreCompileInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Dominio.Modelo.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\refint\Dominio.Modelo.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Dominio.Modelo.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\ref\Dominio.Modelo.dll

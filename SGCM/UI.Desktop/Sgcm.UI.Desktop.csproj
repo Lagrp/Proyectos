@@ -1,0 +1,501 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Recursos\Iconos\CMico40X40.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Recursos\Iconos\CMico40X40.ico" />
+    <None Remove="Recursos\Imagenes\118019482.png" />
+    <None Remove="Recursos\Imagenes\218142427.png" />
+    <None Remove="Recursos\Imagenes\accounting_32px.png" />
+    <None Remove="Recursos\Imagenes\address_32px.png" />
+    <None Remove="Recursos\Imagenes\address_book_32px.png" />
+    <None Remove="Recursos\Imagenes\add_key_32px.png" />
+    <None Remove="Recursos\Imagenes\add_new_32px.png" />
+    <None Remove="Recursos\Imagenes\add_phone_32px.png" />
+    <None Remove="Recursos\Imagenes\Add_social_networks.png" />
+    <None Remove="Recursos\Imagenes\add_user_female_32px.png" />
+    <None Remove="Recursos\Imagenes\add_user_injured_32px.png" />
+    <None Remove="Recursos\Imagenes\add_user_male_32px.png" />
+    <None Remove="Recursos\Imagenes\add_website_32px.png" />
+    <None Remove="Recursos\Imagenes\administrative_tools_32px.png" />
+    <None Remove="Recursos\Imagenes\admin_settings_female_32px.png" />
+    <None Remove="Recursos\Imagenes\admin_settings_male_32px.png" />
+    <None Remove="Recursos\Imagenes\Android Phone.png" />
+    <None Remove="Recursos\Imagenes\appointments.png" />
+    <None Remove="Recursos\Imagenes\authentication_32px.png" />
+    <None Remove="Recursos\Imagenes\automation_32px.png" />
+    <None Remove="Recursos\Imagenes\Badoo.png" />
+    <None Remove="Recursos\Imagenes\bahai_star_50px.png" />
+    <None Remove="Recursos\Imagenes\bell_32px.png" />
+    <None Remove="Recursos\Imagenes\birthday_32px.png" />
+    <None Remove="Recursos\Imagenes\birthday_date_32px.png" />
+    <None Remove="Recursos\Imagenes\calendario.png" />
+    <None Remove="Recursos\Imagenes\calendar_32ftpx.png" />
+    <None Remove="Recursos\Imagenes\calendar_32px.png" />
+    <None Remove="Recursos\Imagenes\camera_32px.png" />
+    <None Remove="Recursos\Imagenes\camera_identification_32px.png" />
+    <None Remove="Recursos\Imagenes\cancel_32px.png" />
+    <None Remove="Recursos\Imagenes\cee.jpg" />
+    <None Remove="Recursos\Imagenes\chat_32px.png" />
+    <None Remove="Recursos\Imagenes\City.png" />
+    <None Remove="Recursos\Imagenes\close_32px.png" />
+    <None Remove="Recursos\Imagenes\close_window_32px.png" />
+    <None Remove="Recursos\Imagenes\CMico40X40.ico" />
+    <None Remove="Recursos\Imagenes\CMico40X40.png" />
+    <None Remove="Recursos\Imagenes\colegioobstetras.png" />
+    <None Remove="Recursos\Imagenes\collaborator_female_32px.png" />
+    <None Remove="Recursos\Imagenes\comandos_perfil.png" />
+    <None Remove="Recursos\Imagenes\combo_chart_32px.png" />
+    <None Remove="Recursos\Imagenes\construction_mail_open_32px.png" />
+    <None Remove="Recursos\Imagenes\contacts_32px.png" />
+    <None Remove="Recursos\Imagenes\control_panel_32px.png" />
+    <None Remove="Recursos\Imagenes\dashborad.png" />
+    <None Remove="Recursos\Imagenes\delete_phone_32px.png" />
+    <None Remove="Recursos\Imagenes\delete_row_32px.png" />
+    <None Remove="Recursos\Imagenes\DNI.png" />
+    <None Remove="Recursos\Imagenes\DocAna.png" />
+    <None Remove="Recursos\Imagenes\doctor_female_32px.png" />
+    <None Remove="Recursos\Imagenes\done_32px.png" />
+    <None Remove="Recursos\Imagenes\duplicate_contacts_32px.png" />
+    <None Remove="Recursos\Imagenes\edit_32px.png" />
+    <None Remove="Recursos\Imagenes\edit_calendar_32px.png" />
+    <None Remove="Recursos\Imagenes\edit_profile_32px.png" />
+    <None Remove="Recursos\Imagenes\edit_row_32px.png" />
+    <None Remove="Recursos\Imagenes\end_call_male_32px.png" />
+    <None Remove="Recursos\Imagenes\enter_32px.png" />
+    <None Remove="Recursos\Imagenes\exit_32px.png" />
+    <None Remove="Recursos\Imagenes\facebook_48px.png" />
+    <None Remove="Recursos\Imagenes\fast_forward_32px.png" />
+    <None Remove="Recursos\Imagenes\female_user_32px.png" />
+    <None Remove="Recursos\Imagenes\File Explorer.png" />
+    <None Remove="Recursos\Imagenes\file_explorer_32px.png" />
+    <None Remove="Recursos\Imagenes\find_user_female_32px.png" />
+    <None Remove="Recursos\Imagenes\Flow Chart.png" />
+    <None Remove="Recursos\Imagenes\Fondo1.png" />
+    <None Remove="Recursos\Imagenes\FondoMujer.png" />
+    <None Remove="Recursos\Imagenes\graduate_32px.png" />
+    <None Remove="Recursos\Imagenes\graduation_cap_32px.png" />
+    <None Remove="Recursos\Imagenes\grand_master_key_32px.png" />
+    <None Remove="Recursos\Imagenes\group_message_32px.png" />
+    <None Remove="Recursos\Imagenes\Home Telephone_32px.png" />
+    <None Remove="Recursos\Imagenes\home_page_32px.png" />
+    <None Remove="Recursos\Imagenes\iconoobstetricia.png" />
+    <None Remove="Recursos\Imagenes\icono_colegiados_1-1.png" />
+    <None Remove="Recursos\Imagenes\identification_documents_32px.png" />
+    <None Remove="Recursos\Imagenes\Instagram logo_48px.png" />
+    <None Remove="Recursos\Imagenes\iPhone SE_32px.png" />
+    <None Remove="Recursos\Imagenes\laptop_settings_32px.png" />
+    <None Remove="Recursos\Imagenes\lgbtq_32px.png" />
+    <None Remove="Recursos\Imagenes\linkedin_48px.png" />
+    <None Remove="Recursos\Imagenes\login_30px.png" />
+    <None Remove="Recursos\Imagenes\login_32px.png" />
+    <None Remove="Recursos\Imagenes\LogoConsultorio_40.png" />
+    <None Remove="Recursos\Imagenes\logout_32px.png" />
+    <None Remove="Recursos\Imagenes\mail_32px.png" />
+    <None Remove="Recursos\Imagenes\mail_account_32px.png" />
+    <None Remove="Recursos\Imagenes\maintenance_date_32px.png" />
+    <None Remove="Recursos\Imagenes\map_marker_32px.png" />
+    <None Remove="Recursos\Imagenes\menu_32px.png" />
+    <None Remove="Recursos\Imagenes\menu_50px.png" />
+    <None Remove="Recursos\Imagenes\minimize_window_32px.png" />
+    <None Remove="Recursos\Imagenes\multiply_32bpx.png" />
+    <None Remove="Recursos\Imagenes\multiply_32px.png" />
+    <None Remove="Recursos\Imagenes\network_2_32px.png" />
+    <None Remove="Recursos\Imagenes\new_message_32px.png" />
+    <None Remove="Recursos\Imagenes\Office Phone.png" />
+    <None Remove="Recursos\Imagenes\options.png" />
+    <None Remove="Recursos\Imagenes\Pasaporte3936.jpg" />
+    <None Remove="Recursos\Imagenes\password_32px.png" />
+    <None Remove="Recursos\Imagenes\password_reset_32px.png" />
+    <None Remove="Recursos\Imagenes\perfil1.png" />
+    <None Remove="Recursos\Imagenes\person_calendar_32px.png" />
+    <None Remove="Recursos\Imagenes\person_female_32px.png" />
+    <None Remove="Recursos\Imagenes\Peru.png" />
+    <None Remove="Recursos\Imagenes\phone_32px.png" />
+    <None Remove="Recursos\Imagenes\pinterest_48px.png" />
+    <None Remove="Recursos\Imagenes\plus_math_32px.png" />
+    <None Remove="Recursos\Imagenes\postman_32px.png" />
+    <None Remove="Recursos\Imagenes\presentation_screen_32px.png" />
+    <None Remove="Recursos\Imagenes\Privacy Policy.png" />
+    <None Remove="Recursos\Imagenes\pulse_96px.png" />
+    <None Remove="Recursos\Imagenes\Reddit.png" />
+    <None Remove="Recursos\Imagenes\Remove User Female_32px.png" />
+    <None Remove="Recursos\Imagenes\rewind_32px.png" />
+    <None Remove="Recursos\Imagenes\save_32px.png" />
+    <None Remove="Recursos\Imagenes\school_32px.png" />
+    <None Remove="Recursos\Imagenes\search_client_32px.png" />
+    <None Remove="Recursos\Imagenes\search_user_injured_32px.png" />
+    <None Remove="Recursos\Imagenes\shutdown_26px.png" />
+    <None Remove="Recursos\Imagenes\shutdown_32px.png" />
+    <None Remove="Recursos\Imagenes\sms_32px.png" />
+    <None Remove="Recursos\Imagenes\snapchat-logo.png" />
+    <None Remove="Recursos\Imagenes\social-networks.png" />
+    <None Remove="Recursos\Imagenes\Sunat.png" />
+    <None Remove="Recursos\Imagenes\switch_off_32px.png" />
+    <None Remove="Recursos\Imagenes\switch_on_32px.png" />
+    <None Remove="Recursos\Imagenes\system_administrator_female_32px.png" />
+    <None Remove="Recursos\Imagenes\tiktok_48px.png" />
+    <None Remove="Recursos\Imagenes\Timeline.png" />
+    <None Remove="Recursos\Imagenes\today_32px.png" />
+    <None Remove="Recursos\Imagenes\twitter_squared_48px.png" />
+    <None Remove="Recursos\Imagenes\upload_24px.png" />
+    <None Remove="Recursos\Imagenes\User Shield.png" />
+    <None Remove="Recursos\Imagenes\user_injured_32px.png" />
+    <None Remove="Recursos\Imagenes\user_secured_32px.png" />
+    <None Remove="Recursos\Imagenes\usuario1.png" />
+    <None Remove="Recursos\Imagenes\validation_32px.png" />
+    <None Remove="Recursos\Imagenes\Vimeo.png" />
+    <None Remove="Recursos\Imagenes\website_32px.png" />
+    <None Remove="Recursos\Imagenes\whois_32px.png" />
+    <None Remove="Recursos\Imagenes\YouTube.png" />
+    <None Remove="Recursos\Imagenes\youtube_squared_48px.png" />
+    <None Remove="Vistas\close_32px.png" />
+    <None Remove="Vistas\CMico40X40.png" />
+    <None Remove="Vistas\DocAna.png" />
+    <None Remove="Vistas\Fondo1.png" />
+    <None Remove="Vistas\FondoMujer.png" />
+    <None Remove="Vistas\LogoConsultorio_40.png" />
+    <None Remove="Recursos\bell_32px.png" />
+    <None Remove="Recursos\calendar_32px.png" />
+    <None Remove="Recursos\close_window_32px.png" />
+    <None Remove="Recursos\DocAna.png" />
+    <None Remove="Recursos\doctor_female_32px.png" />
+    <None Remove="Recursos\exit_32px.png" />
+    <None Remove="Recursos\FondoMujer.png" />
+    <None Remove="Recursos\group_message_32px.png" />
+    <None Remove="Recursos\login_30px.png" />
+    <None Remove="Recursos\minimize_window_32px.png" />
+    <None Remove="Recursos\password_32px.png" />
+    <None Remove="Recursos\sms_32px.png" />
+    <None Remove="Vistas\\Recursos\menu_50px.png" />
+    <None Remove="Recursos\accounting_32px.png" />
+    <None Remove="Recursos\address_book_32px.png" />
+    <None Remove="Recursos\automation_32px.png" />
+    <None Remove="Recursos\CMico40X40.ico" />
+    <None Remove="Recursos\CMico40X40.png" />
+    <None Remove="Recursos\combo_chart_32px.png" />
+    <None Remove="Recursos\control_panel_32px.png" />
+    <None Remove="Recursos\LogoConsultorio_40.png" />
+    <None Remove="Recursos\menu_50px.png" />
+    <None Remove="Recursos\shutdown_26px.png" />
+    <None Remove="Recursos\user_injured_32px.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\AppTools\AppTools.csproj" />
+    <ProjectReference Include="..\..\CtrlApp\WpfCtrls\WpfCtrls.csproj" />
+    <ProjectReference Include="..\Sgcm.API\Sgcm.App.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Recursos\Iconos\CMico40X40.ico" />
+    <Resource Include="Recursos\Imagenes\118019482.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\218142427.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\accounting_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\address_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\address_book_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\add_key_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\add_new_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\add_phone_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Add_social_networks.png" />
+    <Resource Include="Recursos\Imagenes\add_user_female_32px.png" />
+    <Resource Include="Recursos\Imagenes\add_user_injured_32px.png" />
+    <Resource Include="Recursos\Imagenes\add_user_male_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\add_website_32px.png" />
+    <Resource Include="Recursos\Imagenes\administrative_tools_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\admin_settings_female_32px.png" />
+    <Resource Include="Recursos\Imagenes\admin_settings_male_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Android Phone.png" />
+    <Resource Include="Recursos\Imagenes\appointments.png" />
+    <Resource Include="Recursos\Imagenes\authentication_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\automation_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Badoo.png" />
+    <Resource Include="Recursos\Imagenes\bahai_star_50px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\bell_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\birthday_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\birthday_date_32px.png" />
+    <Resource Include="Recursos\Imagenes\calendario.png" />
+    <Resource Include="Recursos\Imagenes\calendar_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\camera_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\camera_identification_32px.png" />
+    <Resource Include="Recursos\Imagenes\cancel_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\cee.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\chat_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\City.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\close_32px.png" />
+    <Resource Include="Recursos\Imagenes\close_window_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\CMico40X40.png" />
+    <Resource Include="Recursos\Imagenes\colegioobstetras.png" />
+    <Resource Include="Recursos\Imagenes\collaborator_female_32px.png" />
+    <Resource Include="Recursos\Imagenes\comandos_perfil.png" />
+    <Resource Include="Recursos\Imagenes\combo_chart_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\construction_mail_open_32px.png" />
+    <Resource Include="Recursos\Imagenes\dashborad.png" />
+    <Resource Include="Recursos\Imagenes\delete_phone_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\delete_row_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\DNI.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\doctor_female_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\done_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\duplicate_contacts_32px.png" />
+    <Resource Include="Recursos\Imagenes\edit_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\edit_calendar_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\edit_profile_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\edit_row_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\end_call_male_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\enter_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\exit_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\facebook_48px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\fast_forward_32px.png" />
+    <Resource Include="Recursos\Imagenes\female_user_32px.png" />
+    <Resource Include="Recursos\Imagenes\File Explorer.png" />
+    <Resource Include="Recursos\Imagenes\file_explorer_32px.png" />
+    <Resource Include="Recursos\Imagenes\find_user_female_32px.png" />
+    <Resource Include="Recursos\Imagenes\Flow Chart.png" />
+    <Resource Include="Recursos\Imagenes\Fondo1.png" />
+    <Resource Include="Recursos\Imagenes\FondoMujer.png" />
+    <Resource Include="Recursos\Imagenes\graduate_32px.png" />
+    <Resource Include="Recursos\Imagenes\graduation_cap_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\grand_master_key_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\group_message_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Home Telephone_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\home_page_32px.png" />
+    <Resource Include="Recursos\Imagenes\iconoobstetricia.png" />
+    <Resource Include="Recursos\Imagenes\icono_colegiados_1-1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\identification_documents_32px.png" />
+    <Resource Include="Recursos\Imagenes\Instagram logo_48px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\iPhone SE_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\laptop_settings_32px.png" />
+    <Resource Include="Recursos\Imagenes\lgbtq_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\linkedin_48px.png" />
+    <Resource Include="Recursos\Imagenes\login_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\LogoConsultorio_40.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\logout_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\mail_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\mail_account_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\maintenance_date_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\map_marker_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\menu_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\minimize_window_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\multiply_32bpx.png" />
+    <Resource Include="Recursos\Imagenes\multiply_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\network_2_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\new_message_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Office Phone.png" />
+    <Resource Include="Recursos\Imagenes\options.png" />
+    <Resource Include="Recursos\Imagenes\Pasaporte3936.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\password_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\password_reset_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\person_calendar_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\person_female_32px.png" />
+    <Resource Include="Recursos\Imagenes\Peru.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\phone_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\pinterest_48px.png" />
+    <Resource Include="Recursos\Imagenes\plus_math_32px.png" />
+    <Resource Include="Recursos\Imagenes\postman_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\presentation_screen_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Privacy Policy.png" />
+    <Resource Include="Recursos\Imagenes\pulse_96px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Reddit.png" />
+    <Resource Include="Recursos\Imagenes\Remove User Female_32px.png" />
+    <Resource Include="Recursos\Imagenes\rewind_32px.png" />
+    <Resource Include="Recursos\Imagenes\save_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\school_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\search_client_32px.png" />
+    <Resource Include="Recursos\Imagenes\search_user_injured_32px.png" />
+    <Resource Include="Recursos\Imagenes\shutdown_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\snapchat-logo.png" />
+    <Resource Include="Recursos\Imagenes\social-networks.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Sunat.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\switch_off_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\switch_on_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\system_administrator_female_32px.png" />
+    <Resource Include="Recursos\Imagenes\tiktok_48px.png" />
+    <Resource Include="Recursos\Imagenes\Timeline.png" />
+    <Resource Include="Recursos\Imagenes\today_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\twitter_squared_48px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\upload_24px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\User Shield.png" />
+    <Resource Include="Recursos\Imagenes\user_secured_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\usuario1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Recursos\Imagenes\user_injured_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\validation_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\Vimeo.png" />
+    <Resource Include="Recursos\Imagenes\website_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\whois_32px.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Imagenes\YouTube.png" />
+  </ItemGroup>
+
+</Project>

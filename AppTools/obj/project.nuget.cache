@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "8905i1z5ZOHu6BoWDqy58makoZmP2+bJaE5PUVHTtJvWZeMj3Rz7duBUuv5ImGCjMFODKBZEVq1X0TjyKi5jRQ==",
+  "success": true,
+  "projectFilePath": "D:\\LAGRPSoft\\Proyectosbk\\AppTools\\AppTools.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lagrp\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\lagrp\\.nuget\\packages\\system.drawing.common\\8.0.0\\system.drawing.common.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

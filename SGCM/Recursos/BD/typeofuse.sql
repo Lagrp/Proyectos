@@ -1,0 +1,1 @@
+INSERT INTO `typeofuse` VALUES (1,'Personal','/Recursos/Imagenes/Android Phone.png'),(2,'Corporativo','/Recursos/Imagenes/Office Phone.png');

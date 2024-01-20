@@ -1,0 +1,12 @@
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\bin\Debug\net8.0\POS.Utilities.deps.json
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\bin\Debug\net8.0\POS.Utilities.dll
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\bin\Debug\net8.0\POS.Utilities.pdb
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\obj\Debug\net8.0\POS.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\obj\Debug\net8.0\POS.Utilities.AssemblyInfoInputs.cache
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\obj\Debug\net8.0\POS.Utilities.AssemblyInfo.cs
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\obj\Debug\net8.0\POS.Utilities.csproj.CoreCompileInputs.cache
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\obj\Debug\net8.0\POS.Utilities.sourcelink.json
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\obj\Debug\net8.0\POS.Utilities.dll
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\obj\Debug\net8.0\refint\POS.Utilities.dll
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\obj\Debug\net8.0\POS.Utilities.pdb
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Utilities\obj\Debug\net8.0\ref\POS.Utilities.dll

@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="ListBox.Disabled.Background" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="ListBox.Disabled.Border" Color="#FFD9D9D9" />
+
+    <Style x:Key="ListBoxStyletTablaAux1" TargetType="{x:Type ListView}">
+        <Setter Property="Background" Value="{StaticResource ColorFondoControl}" />
+        <Setter Property="Foreground" Value="{DynamicResource ColorTextoNormal}" />
+        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteSmall}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListView}">
+                    <Border
+                        x:Name="Bd"
+                        Padding="1"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{StaticResource RadioBordeControl}"
+                        SnapsToDevicePixels="true">
+                        <ScrollViewer Padding="{TemplateBinding Padding}" Focusable="false">
+                            <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </ScrollViewer>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="Bd" Property="Background" Value="{StaticResource ListBox.Disabled.Background}" />
+                            <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource ListBox.Disabled.Border}" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsGrouping" Value="true" />
+                                <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

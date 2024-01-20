@@ -1,0 +1,78 @@
+﻿<Border x:Class="WpfCtrls.ImgLinkButton"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfCtrls"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        d:DesignHeight="18"
+        d:DesignWidth="100"
+        SnapsToDevicePixels="True"
+        mc:Ignorable="d">
+
+    <!--  Cursor="Hand">  -->
+    <!--  FontStyle="Italic">  -->
+    <StackPanel HorizontalAlignment="{Binding HorizontalContentAlignment}"
+                VerticalAlignment="{Binding HorizontalContentAlignment}"
+                DataContext="{Binding Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ImgLinkButton}}}"
+                Orientation="{Binding Orientacion}"
+                SnapsToDevicePixels="{Binding SnapsToDevicePixels, ElementName=ImgLinkButton}">
+
+        <Image x:Name="imgLeft"
+               Width="{Binding ImgAnchoLeft}"
+               Height="{Binding ImgAltoLeft}"
+               Margin="{Binding ImgMargenLeft}"
+               HorizontalAlignment="{Binding HorizontalContentAlignment}"
+               VerticalAlignment="{Binding VerticalContentAlignment}"
+               Source="{Binding ImgSourceLeft}"
+               Stretch="{Binding ImgStretchLeft}" />
+
+        <TextBlock x:Name="textBlock"
+                   HorizontalAlignment="{Binding HorizontalContentAlignment}"
+                   VerticalAlignment="{Binding VerticalContentAlignment}"
+                   Background="{Binding Background}"
+                   FontFamily="{Binding FontFamily}"
+                   FontSize="{Binding FontSize}"
+                   FontStyle="{Binding FontStyle}"
+                   FontWeight="{Binding FontWeight}"
+                   Foreground="{Binding Foreground}"
+                   TextDecorations="Underline"
+                   TextWrapping="Wrap">
+
+            <Hyperlink NavigateUri="{Binding NavigateUri}">
+                <Run Name="test" Text="{Binding TextLink}" />
+            </Hyperlink>
+        </TextBlock>
+
+        <Image x:Name="imgRight"
+               Width="{Binding ImgAnchoRight}"
+               Height="{Binding ImgAltoRight}"
+               Margin="{Binding ImgMargenRight}"
+               HorizontalAlignment="{Binding HorizontalContentAlignment}"
+               VerticalAlignment="{Binding VerticalContentAlignment}"
+               Source="{Binding ImgSourceRight}"
+               Stretch="{Binding ImgStretchRight}" />
+    </StackPanel>
+</Border>
+
+<!--<TextBlock x:Name="txtLink"
+Grid.Column="1"
+Text="{TemplateBinding Content}"
+FontFamily="{TemplateBinding FontFamily}"
+FontSize="{TemplateBinding FontSize}"
+FontWeight="{TemplateBinding FontWeight}"
+FontStyle="{TemplateBinding FontStyle}"
+TextDecorations="Underline"
+Foreground="{TemplateBinding Foreground}"
+HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+Background="{TemplateBinding Background}"
+TextWrapping="Wrap" />-->
+
+<!--<Paragraph>
+<Run>Text preceding the hyperlink.</Run>
+<Hyperlink
+NavigateUri="http://search.msn.com">
+Link text.
+</Hyperlink>
+<Run Name="test">Text following the hyperlink.</Run>
+</Paragraph>-->

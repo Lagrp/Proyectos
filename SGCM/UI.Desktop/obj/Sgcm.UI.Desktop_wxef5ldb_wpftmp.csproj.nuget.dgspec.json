@@ -1,0 +1,283 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\UI.Desktop\\Sgcm.UI.Desktop.csproj": {}
+  },
+  "projects": {
+    "D:\\Documents\\LAGRP Soft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents\\LAGRP Soft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj",
+        "projectName": "WpfCtrls",
+        "projectPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj",
+        "packagesPath": "C:\\Users\\Luis Rios\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\CtrlApp\\WpfCtrls\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Luis Rios\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0-windows7.0": {
+            "targetAlias": "net7.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.39, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj",
+        "projectName": "Sgcm.App",
+        "projectPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj",
+        "packagesPath": "C:\\Users\\Luis Rios\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Luis Rios\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj": {
+                "projectPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.33, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj",
+        "projectName": "Sgcm.InfraSoporte",
+        "projectPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj",
+        "packagesPath": "C:\\Users\\Luis Rios\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Luis Rios\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.33, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\UI.Desktop\\Sgcm.UI.Desktop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\UI.Desktop\\Sgcm.UI.Desktop.csproj",
+        "projectName": "Sgcm.UI.Desktop",
+        "projectPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\UI.Desktop\\Sgcm.UI.Desktop.csproj",
+        "packagesPath": "C:\\Users\\Luis Rios\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\UI.Desktop\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Luis Rios\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0-windows7.0": {
+            "targetAlias": "net7.0-windows",
+            "projectReferences": {
+              "D:\\Documents\\LAGRP Soft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj": {
+                "projectPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj"
+              },
+              "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj": {
+                "projectPath": "D:\\Documents\\LAGRP Soft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

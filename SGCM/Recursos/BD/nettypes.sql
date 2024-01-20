@@ -1,0 +1,11 @@
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/YouTube.png' WHERE (`nett_id` = '1');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/facebook_48px.png' WHERE (`nett_id` = '2');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/Instagram logo_48px.png' WHERE (`nett_id` = '3');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/tiktok_48px.png' WHERE (`nett_id` = '4');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/twitter_squared_48px.png' WHERE (`nett_id` = '5');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/linkedin_48px.png' WHERE (`nett_id` = '6');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/Reddit.png' WHERE (`nett_id` = '7');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/pinterest_48px.png' WHERE (`nett_id` = '8');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/Vimeo.png' WHERE (`nett_id` = '9');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/snapchat-logo.png' WHERE (`nett_id` = '10');
+UPDATE `sgcmdb`.`nettype` SET `nett_ico` = '/Recursos/Imagenes/Badoo.png' WHERE (`nett_id` = '11');

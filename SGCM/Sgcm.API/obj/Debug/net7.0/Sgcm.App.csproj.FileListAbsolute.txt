@@ -1,0 +1,59 @@
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.App.deps.json
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.App.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.App.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraData.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraSoporte.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraData.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraSoporte.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.csproj.AssemblyReference.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.AssemblyInfoInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.AssemblyInfo.cs
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.csproj.CoreCompileInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.csproj.CopyComplete
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\refint\Sgcm.App.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\ref\Sgcm.App.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.sourcelink.json
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.App.deps.json
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.App.dll
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.App.pdb
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraData.dll
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraSoporte.dll
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraData.pdb
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraSoporte.pdb
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.csproj.AssemblyReference.cache
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.AssemblyInfoInputs.cache
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.AssemblyInfo.cs
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.csproj.CoreCompileInputs.cache
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.csproj.CopyComplete
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.dll
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\refint\Sgcm.App.dll
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.pdb
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\ref\Sgcm.App.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.App.deps.json
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.App.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.App.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraData.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraSoporte.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraData.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\bin\Debug\net7.0\Sgcm.InfraSoporte.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.csproj.AssemblyReference.cache
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.AssemblyInfoInputs.cache
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.AssemblyInfo.cs
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.csproj.CoreCompileInputs.cache
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.csproj.CopyComplete
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\refint\Sgcm.App.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\ref\Sgcm.App.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.API\obj\Debug\net7.0\Sgcm.App.sourcelink.json

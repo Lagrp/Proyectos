@@ -1,0 +1,37 @@
+D:\Documents\LAGRP Soft\Proyectos\AppTools\bin\Debug\net7.0-windows\AppTools.deps.json
+D:\Documents\LAGRP Soft\Proyectos\AppTools\bin\Debug\net7.0-windows\AppTools.dll
+D:\Documents\LAGRP Soft\Proyectos\AppTools\bin\Debug\net7.0-windows\AppTools.pdb
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.csproj.AssemblyReference.cache
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.AssemblyInfoInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.AssemblyInfo.cs
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.csproj.CoreCompileInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.dll
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\refint\AppTools.dll
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.pdb
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\ref\AppTools.dll
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\bin\Debug\net7.0-windows\AppTools.deps.json
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\bin\Debug\net7.0-windows\AppTools.dll
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\bin\Debug\net7.0-windows\AppTools.pdb
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.csproj.AssemblyReference.cache
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.AssemblyInfoInputs.cache
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.AssemblyInfo.cs
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.csproj.CoreCompileInputs.cache
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.dll
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\refint\AppTools.dll
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.pdb
+D:\Documentos\LAGRP Soft\Proyectos\AppTools\obj\Debug\net7.0-windows\ref\AppTools.dll
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\bin\Debug\net7.0-windows\AppTools.deps.json
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\bin\Debug\net7.0-windows\AppTools.dll
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\bin\Debug\net7.0-windows\AppTools.pdb
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.csproj.AssemblyReference.cache
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.AssemblyInfoInputs.cache
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.AssemblyInfo.cs
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.csproj.CoreCompileInputs.cache
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.dll
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\refint\AppTools.dll
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.pdb
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\ref\AppTools.dll
+D:\Documentos\LAGRPSoft\Proyectos\AppTools\obj\Debug\net7.0-windows\AppTools.sourcelink.json

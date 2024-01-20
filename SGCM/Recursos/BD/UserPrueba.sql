@@ -1,0 +1,1 @@
+INSERT INTO `sgcmdb`.`users` (`usu_personid`, `usu_profileid`, `usu_specialty`, `usu_colegiatura`, `usu_login`, `usu_password`, `usu_createtime`, `usu_edittime`, `usu_canceltime`, `usu_state`) VALUES ('118019482', '1', 'Administrador', 'xxxxxxx', 'lagrp', 'luan3306', '2023-10-27', '2023-10-27', '1900-1-1', '1');

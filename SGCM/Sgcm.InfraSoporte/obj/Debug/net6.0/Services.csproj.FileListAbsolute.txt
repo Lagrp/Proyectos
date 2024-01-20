@@ -1,0 +1,17 @@
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\Services.AssemblyInfo.cs
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\bin\Debug\net6.0\Services.deps.json
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\bin\Debug\net6.0\Services.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\bin\Debug\net6.0\Services.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\bin\Debug\net6.0\DataAccess.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\bin\Debug\net6.0\Modelo.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\bin\Debug\net6.0\DataAccess.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\bin\Debug\net6.0\Modelo.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\Services.csproj.CopyComplete
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\Services.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\refint\Services.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\Services.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Services\obj\Debug\net6.0\ref\Services.dll

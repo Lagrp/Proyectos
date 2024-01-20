@@ -1,0 +1,47 @@
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Sgcm.Dominio.csproj.AssemblyReference.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Sgcm.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Sgcm.Dominio.AssemblyInfoInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Sgcm.Dominio.AssemblyInfo.cs
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Sgcm.Dominio.csproj.CoreCompileInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\bin\Debug\net7.0\Sgcm.Dominio.deps.json
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\bin\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\bin\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\refint\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Modelo\obj\Debug\net7.0\ref\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\bin\Debug\net7.0\Sgcm.Dominio.deps.json
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\bin\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\bin\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.AssemblyInfoInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.AssemblyInfo.cs
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.csproj.CoreCompileInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\refint\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\ref\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.sourcelink.json
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\bin\Debug\net7.0\Sgcm.Dominio.deps.json
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\bin\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\bin\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.AssemblyInfoInputs.cache
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.AssemblyInfo.cs
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.csproj.CoreCompileInputs.cache
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\refint\Sgcm.Dominio.dll
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documentos\LAGRP Soft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\ref\Sgcm.Dominio.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\bin\Debug\net7.0\Sgcm.Dominio.deps.json
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\bin\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\bin\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.AssemblyInfoInputs.cache
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.AssemblyInfo.cs
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.csproj.CoreCompileInputs.cache
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\refint\Sgcm.Dominio.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\ref\Sgcm.Dominio.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.Dominio\obj\Debug\net7.0\Sgcm.Dominio.sourcelink.json

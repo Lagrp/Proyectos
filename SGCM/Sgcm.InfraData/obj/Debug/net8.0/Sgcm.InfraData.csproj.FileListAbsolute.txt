@@ -1,0 +1,54 @@
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraData.deps.json
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraData.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraData.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.Dominio.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraSoporte.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.Dominio.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraSoporte.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.csproj.AssemblyReference.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.AssemblyInfoInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.AssemblyInfo.cs
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.csproj.CoreCompileInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.sourcelink.json
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.csproj.CopyComplete
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\refint\Sgcm.InfraData.dll
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.pdb
+D:\Documents\LAGRP Soft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\ref\Sgcm.InfraData.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraData.deps.json
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraData.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraData.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.Dominio.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraSoporte.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.Dominio.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraSoporte.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.csproj.AssemblyReference.cache
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.AssemblyInfoInputs.cache
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.AssemblyInfo.cs
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.csproj.CoreCompileInputs.cache
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.sourcelink.json
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.csproj.CopyComplete
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\refint\Sgcm.InfraData.dll
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.pdb
+D:\Documentos\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\ref\Sgcm.InfraData.dll
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraData.deps.json
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraData.dll
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraData.pdb
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.Dominio.dll
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraSoporte.dll
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.Dominio.pdb
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\bin\Debug\net8.0\Sgcm.InfraSoporte.pdb
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.csproj.AssemblyReference.cache
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.GeneratedMSBuildEditorConfig.editorconfig
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.AssemblyInfoInputs.cache
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.AssemblyInfo.cs
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.csproj.CoreCompileInputs.cache
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.sourcelink.json
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.csproj.CopyComplete
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.dll
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\refint\Sgcm.InfraData.dll
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\Sgcm.InfraData.pdb
+D:\LAGRPSoft\Proyectos\SGCM\Sgcm.InfraData\obj\Debug\net8.0\ref\Sgcm.InfraData.dll

@@ -1,0 +1,4 @@
+INSERT INTO `sgcmdb`.`tiposdoc` (`tdoc_Nombre`, `tdoc_Abrev`, `tdoc_icono`) VALUES ('Documento Nacional de Identidad', 'DNI', 'xxxxx');
+INSERT INTO `sgcmdb`.`tiposdoc` (`tdoc_Nombre`, `tdoc_Abrev`, `tdoc_icono`) VALUES ('Carnet de Extranjeria', 'CEE', 'xxxxx');
+INSERT INTO `sgcmdb`.`tiposdoc` (`tdoc_Nombre`, `tdoc_Abrev`, `tdoc_icono`) VALUES ('Permiso Temporal de Trabajo', 'PTT', 'xxxxx');
+INSERT INTO `sgcmdb`.`tiposdoc` (`tdoc_Nombre`, `tdoc_Abrev`, `tdoc_icono`) VALUES ('Pasaporte', 'PSP', 'xxxxx');

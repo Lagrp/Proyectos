@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="accounting_32px.png" />
+    <None Remove="AnaSinFondo.png" />
+    <None Remove="CMico40X40.png" />
+    <None Remove="perfil1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WpfCtrls\WpfCtrls.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="accounting_32px.png" />
+    <Resource Include="AnaSinFondo.png" />
+    <Resource Include="CMico40X40.png" />
+    <Resource Include="perfil1.png" />
+  </ItemGroup>
+
+</Project>

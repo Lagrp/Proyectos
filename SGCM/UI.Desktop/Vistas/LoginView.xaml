@@ -1,0 +1,122 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="clr-namespace:Sgcm.UI.Desktop.VistaModelo"
+    xmlns:WpfCtrls="clr-namespace:WpfCtrls;assembly=WpfCtrls"
+    x:Class="Sgcm.UI.Desktop.Vistas.LoginView"
+    mc:Ignorable="d"
+    Height="400"
+    Width="600"
+    WindowStyle="None"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    Background="{StaticResource ColorPantallaFondo}"
+    AllowsTransparency="True"
+    MouseDown="Window_MouseDown">
+
+    <Window.DataContext>
+        <viewModel:LoginVM />
+    </Window.DataContext>
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility" />
+    </Window.Resources>
+
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}" />
+    </Window.Visibility>
+
+    <Border CornerRadius="20">
+        <Border.Background>
+            <ImageBrush ImageSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/FondoMujer.png"
+                        Stretch="UniformToFill" />
+        </Border.Background>
+        <Grid ShowGridLines="False">
+            <!--#region GRID-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <!--#endregion-->
+
+            <!--#region CABECERA-->
+            <Label Content="SGCM"
+                   Grid.Column="1" Grid.Row="1"
+                   FontWeight="Bold"
+                   FontStyle="Oblique"
+                   FontSize="{StaticResource FuenteSmall}"
+                   VerticalAlignment="Center" />
+            <WpfCtrls:IcoButton x:Name="btnClose"
+                                Grid.Column="3" Grid.Row="1"
+                                HorizontalAlignment="Right"
+                                ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/multiply_32bpx.png"
+                                Style="{StaticResource IcoButtonStyleWindowControl}"
+                                Click="btnClose_Click"
+                                IsCancel="True"
+                                TabIndex="3" />
+            <!--#endregion-->
+
+            <Image Source="/Sgcm.UI.Desktop;component/Recursos/Imagenes/LogoConsultorio_40.png"
+                   Grid.Row="2" Grid.Column="2"
+                   Width="150"
+                   Height="40"
+                   Stretch="UniformToFill"
+                   Margin="0,5,0,5"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
+
+            <StackPanel Grid.Row="3" Grid.Column="2">
+                <TextBlock Style="{StaticResource TextBlockTitulo1}"
+                           Text="Login"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,30" />
+                <WpfCtrls:PhTextBox x:Name="txtUserName"
+                                    Style="{StaticResource PhTextBoxNormal}"
+                                    Text="{Binding Username, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                    PlaceholderText="Ingresa tu usuario"
+                                    ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/doctor_female_32px.png"
+                                    Height="25"
+                                    TabIndex="0"
+                                    ToolTip="Ingresa tu usuario" />
+                <WpfCtrls:PhPasswordBox x:Name="pswPassword"
+                                        Style="{StaticResource PhPasswordBoxNormal}"
+                                        Grid.Column="1" Grid.Row="2"
+                                        Password="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                        PlaceholderText="Ingresa tu contraseña"
+                                        ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/password_32px.png"
+                                        Height="25"
+                                        TabIndex="1"
+                                        ToolTip="Ingresa tu contaseña" />
+                <TextBlock x:Name="txbError"
+                           Style="{StaticResource TextBlocKError}"
+                           Text="{Binding ErrorMessage, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
+                <WpfCtrls:ImgButton Style="{StaticResource ImgButtonStyleFlat}"
+                                    x:Name="btLogin"
+                                    Content="Login"
+                                    ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/login_32px.png"
+                                    HorizontalContentAlignment="Center"
+                                    Command="{Binding LoginCommand}"
+                                    TabIndex="2"
+                                    IsDefault="True" />
+                <WpfCtrls:ImgLinkButton x:Name="lblRestauraPwd"
+                                        Style="{StaticResource Hiperlink}"
+                                        TextLink="¿Olvidaste tu contraseña?"
+                                        HorizontalAlignment="Center"
+                                        Margin="0,20,0,0" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

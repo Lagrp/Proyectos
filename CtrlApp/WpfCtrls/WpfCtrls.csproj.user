@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="IcoToggleButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ImgDropdownMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ImgLinkButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OptButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PhComboBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ImgTextBlock.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PhPasswordBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ChipButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="IcoButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="IcoToggleButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ImgButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ImgDropdownMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ImgLinkButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OptButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PhComboBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ImgTextBlock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PhPasswordBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PhTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ImgToggleButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

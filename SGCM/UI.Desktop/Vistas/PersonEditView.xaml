@@ -1,0 +1,825 @@
+﻿<Window x:Class="Sgcm.UI.Desktop.Vistas.PersonEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:WC="clr-namespace:WpfCtrls;assembly=WpfCtrls"
+        xmlns:vm="clr-namespace:Sgcm.UI.Desktop.VistaModelo"
+        Width="600"
+        Height="620"
+        AllowsTransparency="True"
+        Background="Transparent"
+        MouseDown="Window_MouseDown"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+
+    <Window.DataContext>
+        <vm:PersonEditVM />
+    </Window.DataContext>
+
+    <Border Background="White"
+            BorderBrush="{StaticResource ColorPantallaHeader}"
+            BorderThickness="1"
+            CornerRadius="10">
+        <Grid>
+            <!--#region GRID-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="30" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <!--#endregion-->
+
+            <!--  region CONTROLES DE VENTANA  -->
+            <WC:IcoButton x:Name="btiCancel"
+                          Content=""
+                          Grid.Row="0"
+                          Grid.Column="4"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          Click="btiPassCancel_Click"
+                          ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/close_32px.png"
+                          Style="{StaticResource IcoButtonStyleWindowControl}"
+                          TabIndex="16"
+                          ToolTip="Cancelar" />
+            <!--#endregion-->
+
+            <StackPanel Grid.Row="1"
+                        Grid.Column="1">
+                <TabControl Style="{DynamicResource EstiloTabuladorTarjeta}">
+                    <!--#region DATOS PERSONALES-->
+                    <TabItem Style="{DynamicResource EstiloTabItemTarjeta}">
+                        <TabItem.Header>
+                            <WC:ImgTextBlock Text="Datos personales"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/female_user_32px.png"
+                                             Style="{StaticResource ImgTextBlockTituloTarjeta}" />
+                        </TabItem.Header>
+                        <StackPanel>
+                            <WC:ImgTextBlock Text="Identificacion:"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/identification_documents_32px.png"
+                                             Style="{DynamicResource ImgTextBlockCabecera}" />
+                            <WrapPanel>
+                                <!--#region IDENTIFICACION-->
+                                <Grid>
+                                    <!--#region GRID-->
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="150" />
+                                        <ColumnDefinition Width="150" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30" />
+                                        <RowDefinition Height="30" />
+                                        <RowDefinition Height="30" />
+                                        <RowDefinition Height="30" />
+                                        <RowDefinition Height="30" />
+                                    </Grid.RowDefinitions>
+                                    <!--#endregion-->
+                                    <WC:PhComboBox x:Name="cboTipoDoc"
+                                                   Grid.Row="0"
+                                                   Grid.Column="0"
+                                                   Grid.ColumnSpan="2"
+                                                   DisplayMemberPath="Tdoc_name"
+                                                   ImgAncho="0"
+                                                   IsEnabled="{Binding DocumentTypeActivation}"
+                                                   ItemsSource="{Binding AuxiliaryData.GetDocumentTypes}"
+                                                   PlaceholderText="Tipo de documento"
+                                                   SelectedValue="{Binding PersonData.Per_DocumentType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                   SelectedValuePath="Tdoc_id"
+                                                   SelectionChanged="cboTipoDoc_SelectionChanged"
+                                                   Style="{DynamicResource PhComboBoxTitulo4}"
+                                                   TabIndex="0"
+                                                   ToolTip="Tipo documento" />
+                                    <WrapPanel Grid.Column="2">
+                                        <WC:PhTextBox x:Name="txtDni"
+                                                      Text="{Binding PersonData.Per_DocumentNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                      Width="100"
+                                                      ImgSourceRight="/Sgcm.UI.Desktop;component/Recursos/Imagenes/bahai_star_50px.png"
+                                                      IsEnabled="{Binding DocumentNumberActivation}"
+                                                      PlaceholderText="N° doc."
+                                                      Style="{DynamicResource PhTextBoxNormal}"
+                                                      TabIndex="1"
+                                                      ToolTip="Documento de identidad" />
+                                        <WC:IcoButton x:Name="btiSearch"
+                                                      Content=""
+                                                      HorizontalAlignment="Left"
+                                                      Command="{Binding LoadCommand}"
+                                                      ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/search_client_32px.png"
+                                                      IsDefault="True"
+                                                      Style="{StaticResource IcoButtonStyleBody}"
+                                                      TabIndex="2">
+                                        </WC:IcoButton>
+                                    </WrapPanel>
+                                    <TextBlock Text="Nombre:"
+                                               Grid.Row="1"
+                                               Grid.Column="0"
+                                               Style="{DynamicResource TextBlockTitulo4}" />
+                                    <WC:PhTextBox x:Name="txtName"
+                                                  Text="{Binding PersonData.Per_FirstName, Mode=TwoWay}"
+                                                  Grid.Row="1"
+                                                  Grid.Column="1"
+                                                  ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/imagenes/collaborator_female_32px.png"
+                                                  ImgSourceRight="/Sgcm.UI.Desktop;component/Recursos/imagenes/bahai_star_50px.png"
+                                                  IsEnabled="{Binding ActivationUIPersonControls}"
+                                                  PlaceholderText="Nombre"
+                                                  Style="{DynamicResource PhTextBoxNormal}"
+                                                  ToolTip="Nombre" />
+                                    <WC:PhTextBox x:Name="txtSecondName"
+                                                  Text="{Binding PersonData.Per_SecondName, Mode=TwoWay}"
+                                                  Grid.Row="1"
+                                                  Grid.Column="2"
+                                                  ImgAnchoLeft="0"
+                                                  IsEnabled="{Binding ActivationUIPersonControls}"
+                                                  PlaceholderText="2do Nombre"
+                                                  Style="{DynamicResource PhTextBoxNormal}"
+                                                  ToolTip="segundo nombre" />
+                                    <TextBlock Text="Apellidos:"
+                                               Grid.Row="2"
+                                               Grid.Column="0"
+                                               Style="{DynamicResource TextBlockTitulo4}" />
+                                    <WC:PhTextBox x:Name="txtSurname"
+                                                  Text="{Binding PersonData.Per_Surname, Mode=TwoWay}"
+                                                  Grid.Row="2"
+                                                  Grid.Column="1"
+                                                  ImgSourceRight="/Sgcm.UI.Desktop;component/Recursos/imagenes/bahai_star_50px.png"
+                                                  IsEnabled="{Binding ActivationUIPersonControls}"
+                                                  PlaceholderText="1er Apellido"
+                                                  Style="{DynamicResource PhTextBoxNormal}"
+                                                  ToolTip="Primer apellido" />
+                                    <WC:PhTextBox x:Name="txtSecondSurname"
+                                                  Text="{Binding PersonData.Per_SecondSurname, Mode=TwoWay}"
+                                                  Grid.Row="2"
+                                                  Grid.Column="2"
+                                                  ImgAnchoLeft="0"
+                                                  ImgSourceRight="/Sgcm.UI.Desktop;component/Recursos/imagenes/bahai_star_50px.png"
+                                                  IsEnabled="{Binding ActivationUIPersonControls}"
+                                                  PlaceholderText="2° Apellido"
+                                                  Style="{DynamicResource PhTextBoxNormal}"
+                                                  ToolTip="Segundo apellido" />
+                                    <TextBlock Text="Genero"
+                                               Grid.Row="3"
+                                               Grid.Column="0"
+                                               Style="{DynamicResource TextBlockTitulo4}" />
+                                    <WC:PhComboBox x:Name="cboGenero"
+                                                   Grid.Row="3"
+                                                   Grid.Column="1"
+                                                   DisplayMemberPath="Gen_type"
+                                                   ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/lgbtq_32px.png"
+                                                   IsEnabled="{Binding ActivationUIPersonControls}"
+                                                   ItemsSource="{Binding AuxiliaryData.GetGenders}"
+                                                   PlaceholderText="Genero"
+                                                   SelectedValue="{Binding PersonData.Per_GenderId}"
+                                                   SelectedValuePath="Gen_id"
+                                                   Style="{DynamicResource PhComboBoxStyleNormal}"
+                                                   ToolTip="Genero" />
+                                    <TextBlock Text="RUC"
+                                               Grid.Row="4"
+                                               Grid.Column="0"
+                                               Style="{DynamicResource TextBlockTitulo4}" />
+                                    <WC:PhTextBox x:Name="txtRuc"
+                                                  Text="{Binding PersonData.Per_Ruc}"
+                                                  Grid.Row="4"
+                                                  Grid.Column="1"
+                                                  ImgAltoRight="25"
+                                                  ImgAnchoRight="25"
+                                                  ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/Sunat.png"
+                                                  IsEnabled="{Binding ActivationUIPersonControls}"
+                                                  PlaceholderText="N° RUC"
+                                                  Style="{DynamicResource PhTextBoxNormal}"
+                                                  ToolTip="RUC" />
+                                </Grid>
+                                <!--#endregion-->
+
+                                <!--#region FOTO-->
+                                <StackPanel>
+                                    <WC:ImgTextBlock Text="Foto de perfil"
+                                                     Margin="0,8,0,0"
+                                                     HorizontalAlignment="Center"
+                                                     ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/camera_32px.png"
+                                                     Style="{DynamicResource ImgTextBlockCabecera}" />
+                                    <Ellipse x:Name="DocFoto"
+                                             Grid.Row="1"
+                                             Width="100"
+                                             Height="100"
+                                             Fill="{Binding PersonPhoto, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                             Style="{StaticResource EstiloFotoTarjeta}" />
+                                    <WC:IcoButton x:Name="btiSearchPhoto"
+                                                  Margin="0,-40,0,0"
+                                                  HorizontalAlignment="Right"
+                                                  VerticalAlignment="Bottom"
+                                                  Click="btiSearchPhoto_Click"
+                                                  ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/camera_identification_32px.png"
+                                                  Style="{DynamicResource IcoButtonStyleBody}"
+                                                  Visibility="{Binding VisibilityPersonEditingControls}" />
+                                </StackPanel>
+                                <!--#endregion-->
+                            </WrapPanel>
+
+                            <!--#region DOMICILIO-->
+                            <WC:ImgTextBlock Text="Domicilio:"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/home_page_32px.png"
+                                             Style="{DynamicResource ImgTextBlockCabecera}" />
+                            <Grid>
+                                <!--#region GRID-->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition Height="30" />
+                                </Grid.RowDefinitions>
+                                <!--#endregion-->
+                                <TextBlock Text="Ubigeo"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Style="{DynamicResource TextBlockTitulo4}" />
+                                <WC:PhComboBox x:Name="cboDepartamento"
+                                               Grid.Row="0"
+                                               Grid.Column="1"
+                                               DisplayMemberPath="UbDep_nombre"
+                                               ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/Peru.png"
+                                               IsEnabled="{Binding ActivationUIPersonControls}"
+                                               ItemsSource="{Binding AuxiliaryData.GetDepartamentos}"
+                                               PlaceholderText="Dpto."
+                                               SelectedValue="{Binding PersonData.Per_UbDepId}"
+                                               SelectedValuePath="UbDep_id"
+                                               Style="{DynamicResource PhComboBoxStyleNormal}"
+                                               ToolTip="Departamento" />
+                                <WC:PhComboBox x:Name="cboProvincia"
+                                               Grid.Row="0"
+                                               Grid.Column="2"
+                                               DisplayMemberPath="UbProv_nombre"
+                                               ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/map_marker_32px.png"
+                                               IsEnabled="{Binding ActivationUIPersonControls}"
+                                               ItemsSource="{Binding AuxiliaryData.GetProvincias}"
+                                               PlaceholderText="Provincia"
+                                               SelectedValuePath="UbProv_id"
+                                               Style="{DynamicResource PhComboBoxStyleNormal}"
+                                               ToolTip="Provincia" />
+                                <WC:PhComboBox x:Name="cboDistrito"
+                                               Grid.Row="0"
+                                               Grid.Column="4"
+                                               DisplayMemberPath="Ubdis_name"
+                                               ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/City.png"
+                                               IsEnabled="{Binding ActivationUIPersonControls}"
+                                               ItemsSource="{Binding AuxiliaryData.GetDistritos}"
+                                               PlaceholderText="Distrito"
+                                               SelectedValuePath="Ubdis_id"
+                                               Style="{DynamicResource PhComboBoxStyleNormal}"
+                                               ToolTip="Distrito" />
+                                <TextBlock Text="Dirección"
+                                           Grid.Row="1"
+                                           Grid.Column="0"
+                                           Style="{DynamicResource TextBlockTitulo4}" />
+                                <WC:PhTextBox x:Name="txtDireccion"
+                                              Text="{Binding PersonData.Per_Address}"
+                                              Grid.Row="1"
+                                              Grid.Column="1"
+                                              Grid.ColumnSpan="4"
+                                              Margin="5,0,0,8"
+                                              ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/address_32px.png"
+                                              ImgSourceRight="/Sgcm.UI.Desktop;component/Recursos/Imagenes/bahai_star_50px.png"
+                                              IsEnabled="{Binding ActivationUIPersonControls}"
+                                              PlaceholderText="Dirección domicilio"
+                                              Style="{DynamicResource PhTextBoxNormal}"
+                                              TabIndex="8"
+                                              Tag="Obligatorio"
+                                              TextWrapping="Wrap"
+                                              ToolTip="Dirección domicilio actual" />
+                            </Grid>
+                            <!--#endregion-->
+
+                            <!--#region INFO-->
+                            <WC:ImgTextBlock Text="Info."
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/file_explorer_32px.png"
+                                             Style="{DynamicResource ImgTextBlockCabecera}" />
+                            <StackPanel>
+                                <Grid>
+                                    <!--#region GRID-->
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30" />
+                                        <RowDefinition Height="30" />
+                                        <RowDefinition Height="30" />
+                                    </Grid.RowDefinitions>
+                                    <!--#endregion-->
+                                    <TextBlock Text="Fecha Naci."
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               Style="{DynamicResource TextBlockTitulo4}" />
+                                    <DatePicker x:Name="dtpFechaNac"
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                IsEnabled="{Binding ActivationUIPersonControls}"
+                                                SelectedDate="{Binding PersonData.Per_Birthdate}"
+                                                Style="{DynamicResource DatePickerStyle1}"
+                                                ToolTip="Fecha nacimiento" />
+                                    <TextBlock Text="Seguro"
+                                               Grid.Row="1"
+                                               Style="{DynamicResource TextBlockTitulo4}">
+                                    </TextBlock>
+                                    <WC:PhComboBox x:Name="cboSecurity"
+                                                   Grid.Row="1"
+                                                   Grid.Column="1"
+                                                   DisplayMemberPath="Sec_Name"
+                                                   ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/User Shield.png"
+                                                   IsEnabled="{Binding ActivationUIPersonControls}"
+                                                   ItemsSource="{Binding AuxiliaryData.GetSecures}"
+                                                   PlaceholderText="Aseguradora"
+                                                   SelectedValue="{Binding PersonData.Per_secureId}"
+                                                   SelectedValuePath="Sec_Id"
+                                                   Style="{DynamicResource PhComboBoxStyleNormal}">
+                                    </WC:PhComboBox>
+                                    <TextBlock Text="N° Poliza"
+                                               Grid.Row="2"
+                                               Grid.Column="0"
+                                               Style="{DynamicResource TextBlockTitulo4}">
+                                    </TextBlock>
+                                    <WC:PhTextBox x:Name="TxtSecurePolicy"
+                                                  Text="{Binding PersonData.Per_SecurePolicy}"
+                                                  Grid.Row="2"
+                                                  Grid.Column="1"
+                                                  ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/Privacy Policy.png"
+                                                  IsEnabled="{Binding ActivationUIPersonControls}"
+                                                  PlaceholderText="N° poliza seguro"
+                                                  Style="{DynamicResource PhTextBoxNormal}">
+                                    </WC:PhTextBox>
+                                    <TextBlock Text="Código pac."
+                                               Grid.Row="0"
+                                               Grid.Column="2"
+                                               Style="{DynamicResource TextBlockTitulo4}" />
+                                    <WC:ImgTextBlock x:Name="txtCodPatient"
+                                                     Text="{Binding PersonData.Per_PatientId}"
+                                                     Grid.Row="0"
+                                                     Grid.Column="3"
+                                                     ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/imagenes/user_injured_32px.png"
+                                                     IsEnabled="{Binding ActivationUIPersonControls}"
+                                                     Style="{DynamicResource ImgTextBlockNormal}"
+                                                     ToolTip="Código paciente..." />
+                                    <TextBlock Text="N° Exp. Clinco"
+                                               Grid.Row="1"
+                                               Grid.Column="2"
+                                               Style="{DynamicResource TextBlockTitulo4}" />
+                                    <WC:ImgTextBlock x:Name="txtNHistClin"
+                                                     Text="{Binding PersonData.Per_PatientId}"
+                                                     Grid.Row="1"
+                                                     Grid.Column="3"
+                                                     ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/imagenes/file_explorer_32px.png"
+                                                     IsEnabled="{Binding ActivationUIPersonControls}"
+                                                     Style="{DynamicResource ImgTextBlockNormal}"
+                                                     ToolTip="Código paciente..." />
+                                </Grid>
+                            </StackPanel>
+                            <!--#endregion-->
+
+                            <!--#region CONTACTOS-->
+                            <WC:ImgTextBlock Text="Contactos"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/duplicate_contacts_32px.png"
+                                             Style="{DynamicResource ImgTextBlockCabecera}" />
+                            <TabControl Height="120"
+                                        Style="{StaticResource EstiloTabuladorSubTarjeta}">
+                                <TabItem Style="{DynamicResource EstiloTabItemTarjeta}">
+                                    <TabItem.Header>
+                                        <WC:ImgTextBlock Text="Telefonos:"
+                                                         ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/phone_32px.png"
+                                                         Style="{StaticResource ImgTextBlockTituloTarjeta}" />
+                                    </TabItem.Header>
+                                    <WrapPanel>
+                                        <ListView x:Name="lstTelefonos"
+                                                  Grid.Row="0"
+                                                  Grid.Column="1"
+                                                  ItemsSource="{Binding Phones}"
+                                                  Style="{StaticResource ListBoxStyletTablaAux1}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid>
+                                                        <!--#region GRID-->
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="120" />
+                                                            <ColumnDefinition Width="140" />
+                                                            <ColumnDefinition Width="90" />
+                                                            <ColumnDefinition Width="20" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <!--#endregion-->
+                                                        <WC:PhComboBox x:Name="cboTipoTel"
+                                                                       Grid.Column="0"
+                                                                       DisplayMemberPath="Type_name"
+                                                                       IsEnabled="{Binding DataContext.ActivationUIPersonControls, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                       ItemsSource="{Binding DataContext.AuxiliaryData.GetPhoneTypes, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                       PlaceholderText="tipo"
+                                                                       SelectedValue="{Binding Pho_typeId, Mode=TwoWay}"
+                                                                       SelectedValuePath="Type_id"
+                                                                       Style="{DynamicResource PhComboBoxSmall}"
+                                                                       ToolTip="Tipo telefono" />
+                                                        <WC:PhTextBox x:Name="txtNumeroTel"
+                                                                      Text="{Binding Pho_number, Mode=TwoWay}"
+                                                                      Grid.Column="1"
+                                                                      ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/iPhone SE_32px.png"
+                                                                      IsEnabled="{Binding DataContext.ActivationUIPersonControls, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                      PlaceholderText="numero"
+                                                                      Style="{DynamicResource PhTextBoxSmall}" />
+                                                        <WC:PhComboBox x:Name="cboOperTel"
+                                                                       Grid.Column="2"
+                                                                       DisplayMemberPath="Opet_name"
+                                                                       IsEnabled="{Binding DataContext.ActivationUIPersonControls, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                       ItemsSource="{Binding DataContext.AuxiliaryData.GetPhoneOperator, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                       PlaceholderText="operador"
+                                                                       SelectedValue="{Binding Pho_operatorId, Mode=TwoWay}"
+                                                                       SelectedValuePath="Opet_id"
+                                                                       Style="{DynamicResource PhComboBoxSmall}"
+                                                                       ToolTip="Tipo telefono" />
+                                                        <WC:IcoButton x:Name="btiDelete"
+                                                                      Grid.Column="3"
+                                                                      Command="{Binding DataContext.DeletePersonPhoneCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                      CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}"
+                                                                      ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/multiply_32px.png"
+                                                                      Style="{DynamicResource IcoButtonStyleLista}"
+                                                                      Visibility="{Binding Visibility, ElementName=btiAddPhono}" />
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                        <WC:IcoButton x:Name="btiAddPhono"
+                                                      VerticalAlignment="Top"
+                                                      Command="{Binding AddPersonPhoneCommand}"
+                                                      ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/add_phone_32px.png"
+                                                      Style="{DynamicResource IcoButtonStyleBody}"
+                                                      Visibility="{Binding VisibilityPersonEditingControls}" />
+                                    </WrapPanel>
+                                </TabItem>
+                                <TabItem Style="{DynamicResource EstiloTabItemTarjeta}">
+                                    <TabItem.Header>
+                                        <WC:ImgTextBlock Text="Emails:"
+                                                         ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/mail_32px.png"
+                                                         Style="{DynamicResource ImgTextBlockTituloTarjeta}" />
+                                    </TabItem.Header>
+                                    <WrapPanel>
+                                        <ListView x:Name="lstMails"
+                                                  ItemsSource="{Binding Emails}"
+                                                  Style="{DynamicResource ListBoxStyletTablaAux1}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid>
+                                                        <!--#region GRID-->
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="120" />
+                                                            <ColumnDefinition Width="225" />
+                                                            <ColumnDefinition Width="25" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <!--#endregion-->
+                                                        <WC:PhComboBox x:Name="cboTipoEmail"
+                                                                       Grid.Column="0"
+                                                                       DisplayMemberPath="Type_name"
+                                                                       IsEnabled="{Binding DataContext.ActivationUIPersonControls, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                       ItemsSource="{Binding DataContext.AuxiliaryData.GetEmailTypes, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                       PlaceholderText="tipo"
+                                                                       SelectedValue="{Binding Email_type}"
+                                                                       SelectedValuePath="Type_id"
+                                                                       Style="{DynamicResource PhComboBoxSmall}"
+                                                                       ToolTip="Tipo telefono" />
+                                                        <WC:PhTextBox x:Name="txtEmail"
+                                                                      Text="{Binding Email_link}"
+                                                                      Grid.Column="1"
+                                                                      ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/mail_32px.png"
+                                                                      IsEnabled="{Binding DataContext.ActivationUIPersonControls, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                      Style="{DynamicResource PhTextBoxSmall}" />
+                                                        <WC:IcoButton x:Name="btiDeleteEmail"
+                                                                      Grid.Column="2"
+                                                                      Command="{Binding DataContext.DeletePersonEmailCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                      CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}"
+                                                                      ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/multiply_32px.png"
+                                                                      Style="{DynamicResource IcoButtonStyleLista}"
+                                                                      Visibility="{Binding Visibility, ElementName=btiAddEmail}" />
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                        <WC:IcoButton x:Name="btiAddEmail"
+                                                      HorizontalAlignment="Left"
+                                                      VerticalAlignment="Top"
+                                                      Command="{Binding AddPersonEmailCommand}"
+                                                      ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/new_message_32px.png"
+                                                      Style="{DynamicResource IcoButtonStyleBody}"
+                                                      Visibility="{Binding VisibilityPersonEditingControls}">
+                                        </WC:IcoButton>
+                                    </WrapPanel>
+                                </TabItem>
+                                <TabItem Style="{DynamicResource EstiloTabItemTarjeta}">
+                                    <TabItem.Header>
+                                        <WC:ImgTextBlock Text="Redes sociales:"
+                                                         ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/mail_32px.png"
+                                                         Style="{DynamicResource ImgTextBlockTituloTarjeta}" />
+                                    </TabItem.Header>
+                                    <WrapPanel>
+                                        <ListView x:Name="lstRedes"
+                                                  ItemsSource="{Binding Nets}"
+                                                  Style="{DynamicResource ListBoxStyletTablaAux1}">
+                                            <ListBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid>
+                                                        <!--#region GRID-->
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="120" />
+                                                            <ColumnDefinition Width="225" />
+                                                            <ColumnDefinition Width="25" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <!--#endregion-->
+                                                        <WC:PhComboBox x:Name="pboNetType"
+                                                                       Grid.Column="0"
+                                                                       DisplayMemberPath="Nett_name"
+                                                                       IsEnabled="{Binding DataContext.ActivationUIPersonControls, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                       ItemsSource="{Binding DataContext.AuxiliaryData.GetNetTypes, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"
+                                                                       PlaceholderText="Red social"
+                                                                       SelectedValue="{Binding Net_nettype}"
+                                                                       SelectedValuePath="Nett_id"
+                                                                       SelectionChanged="pboNetType_SelectionChanged"
+                                                                       Style="{StaticResource PhComboBoxSmall}" />
+                                                        <TextBlock x:Name="txtLink"
+                                                                   Grid.Column="1"
+                                                                   Visibility="{Binding DataContext.LinkVisibleEditMode, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}">
+                                                            <Hyperlink NavigateUri="{Binding Text, ElementName=txtEditLink}">
+                                                                <Run Text="{Binding Text, ElementName=txtEditLink}" />
+                                                            </Hyperlink>
+                                                        </TextBlock>
+                                                        <WC:PhTextBox x:Name="txtEditLink"
+                                                                      Text="{Binding Net_url, Mode=TwoWay}"
+                                                                      Grid.Column="1"
+                                                                      ImgAnchoLeft="0"
+                                                                      PlaceholderText="Ingresa el Link"
+                                                                      Style="{StaticResource PhTextBoxSmall}"
+                                                                      Visibility="{Binding Visibility, ElementName=btiAddRed}" />
+                                                        <WC:IcoButton x:Name="btiDeleteRed"
+                                                                      Grid.Column="2"
+                                                                      Command="{Binding DataContext.DeletePersonNetCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox}}}"
+                                                                      CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}"
+                                                                      ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/multiply_32px.png"
+                                                                      Style="{DynamicResource IcoButtonStyleLista}"
+                                                                      Visibility="{Binding Visibility, ElementName=btiAddRed}" />
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </ListBox.ItemTemplate>
+                                        </ListView>
+                                        <WC:IcoButton x:Name="btiAddRed"
+                                                      HorizontalAlignment="Left"
+                                                      VerticalAlignment="Top"
+                                                      Command="{Binding AddPersonNetCommand}"
+                                                      ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/add_social_networks.png"
+                                                      Style="{DynamicResource IcoButtonStyleBody}"
+                                                      Visibility="{Binding VisibilityPersonEditingControls}" />
+                                    </WrapPanel>
+                                </TabItem>
+                            </TabControl>
+                            <!--#endregion-->
+                        </StackPanel>
+                    </TabItem>
+                    <!--#endregion-->
+
+                    <!--#region DATOS USUARIOS-->
+                    <TabItem Style="{DynamicResource EstiloTabItemTarjeta}">
+                        <TabItem.Header>
+                            <WC:ImgTextBlock Text="Datos de usuario"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/doctor_female_32px.png"
+                                             Style="{StaticResource ImgTextBlockTituloTarjeta}" />
+                        </TabItem.Header>
+                        <Grid>
+                            <!--#region GRID-->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
+                            </Grid.RowDefinitions>
+                            <!--#endregion-->
+
+                            <!--#region DATOS PROFESIONALES-->
+                            <WC:ImgTextBlock Text="Datos Profesionales"
+                                             Grid.ColumnSpan="3"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/graduate_32px.png"
+                                             Style="{DynamicResource ImgTextBlockCabecera}" />
+                            <TextBlock Text="Especialidad:"
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       Style="{DynamicResource TextBlockTitulo4}" />
+                            <WC:PhTextBox x:Name="txtEspecialidad"
+                                          Text="{Binding UserData.User_Specialty}"
+                                          Grid.Row="1"
+                                          Grid.Column="1"
+                                          ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/graduation_cap_32px.png"
+                                          IsEnabled="{Binding ActivationUIPersonControls}"
+                                          PlaceholderText="Especialidad"
+                                          Style="{DynamicResource PhTextBoxNormal}"
+                                          ToolTip="Especialidad de usuario" />
+                            <TextBlock Text="Colegiatura:"
+                                       Grid.Row="2"
+                                       Grid.Column="0"
+                                       Style="{DynamicResource TextBlockTitulo4}" />
+                            <WC:PhTextBox x:Name="txtColegio"
+                                          Text="{Binding UserData.User_Colegiatura}"
+                                          Grid.Row="2"
+                                          Grid.Column="1"
+                                          ImgSourceLeft="/Recursos/Imagenes/school_32px.png"
+                                          IsEnabled="{Binding ActivationUIPersonControls}"
+                                          PlaceholderText="N° colegiatura"
+                                          Style="{DynamicResource PhTextBoxNormal}"
+                                          ToolTip="Número de colegiatura" />
+                            <!--#endregion-->
+
+                            <!--#region DATOS SISTEMA-->
+                            <WC:ImgTextBlock Text="Datos del Sistema"
+                                             Grid.Row="3"
+                                             Grid.Column="0"
+                                             Grid.ColumnSpan="3"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/laptop_settings_32px.png"
+                                             Style="{DynamicResource ImgTextBlockCabecera}" />
+                            <TextBlock Text="Usuario"
+                                       Grid.Row="4"
+                                       Grid.Column="0"
+                                       Style="{DynamicResource TextBlockTitulo4}" />
+                            <WC:PhTextBox x:Name="txtUsuario"
+                                          Text="{Binding UserData.User_Login}"
+                                          Grid.Row="4"
+                                          Grid.Column="1"
+                                          ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/doctor_female_32px.png"
+                                          IsEnabled="{Binding ActivationUIPersonControls}"
+                                          PlaceholderText="Usuario del sistema"
+                                          Style="{DynamicResource PhTextBoxNormal}"
+                                          ToolTip="Memoriza tu usuario del sistema" />
+                            <TextBlock Text="Perfil"
+                                       Grid.Row="5"
+                                       Grid.Column="0"
+                                       Style="{DynamicResource TextBlockTitulo4}" />
+                            <WC:PhComboBox x:Name="cboPerfil"
+                                           Grid.Row="5"
+                                           Grid.Column="1"
+                                           DisplayMemberPath="pro_level"
+                                           ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/system_administrator_female_32px.png"
+                                           IsEnabled="{Binding ActivationUIPersonControls}"
+                                           ItemsSource="{Binding AuxiliaryData.GetProfile}"
+                                           PlaceholderText="Perfil de usuario"
+                                           SelectedValue="{Binding UserData.User_Profileid}"
+                                           SelectedValuePath="profile_id"
+                                           Style="{DynamicResource PhComboBoxStyleNormal}"
+                                           ToolTip="Perfil usuario" />
+                            <TextBlock Text="Estado"
+                                       Grid.Row="6"
+                                       Grid.Column="0"
+                                       Style="{DynamicResource TextBlockTitulo4}" />
+                            <WC:PhComboBox x:Name="cboEstado"
+                                           Grid.Row="6"
+                                           Grid.Column="1"
+                                           DisplayMemberPath="Est_estado"
+                                           ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/switch_on_32px.png"
+                                           IsEnabled="{Binding ActivationUIPersonControls}"
+                                           ItemsSource="{Binding AuxiliaryData.GetStates}"
+                                           PlaceholderText="Estado usuario"
+                                           SelectedValue="{Binding UserData.User_StateId}"
+                                           SelectedValuePath="Est_id"
+                                           Style="{DynamicResource PhComboBoxStyleNormal}"
+                                           ToolTip="Estado del usuario" />
+                            <!--#endregion-->
+
+                            <!--#region INFO USUARIO-->
+                            <WC:ImgTextBlock Text="Info."
+                                             Grid.Row="7"
+                                             Grid.Column="0"
+                                             Grid.ColumnSpan="3"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/file_explorer_32px.png"
+                                             Style="{DynamicResource ImgTextBlockCabecera}" />
+                            <TextBlock Text="Fecha alta"
+                                       Grid.Row="8"
+                                       Grid.Column="0"
+                                       Style="{DynamicResource TextBlockTitulo4}" />
+                            <WC:ImgTextBlock x:Name="txbFechaAlta"
+                                             Text="{Binding UserData.User_CreateTime}"
+                                             Grid.Row="8"
+                                             Grid.Column="1"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/today_32px.png"
+                                             IsEnabled="{Binding ActivationUIPersonControls}"
+                                             Style="{DynamicResource ImgTextBlockNormal}"
+                                             ToolTip="Fecha creación" />
+                            <TextBlock Text="Fecxha edición"
+                                       Grid.Row="9"
+                                       Grid.Column="0"
+                                       Style="{DynamicResource TextBlockTitulo4}" />
+                            <WC:ImgTextBlock x:Name="txbFechaMod"
+                                             Text="{Binding UserData.User_EditTime}"
+                                             Grid.Row="9"
+                                             Grid.Column="1"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/edit_calendar_32px.png"
+                                             IsEnabled="{Binding ActivationUIPersonControls}"
+                                             Style="{DynamicResource ImgTextBlockNormal}"
+                                             ToolTip="Fecha modificacion" />
+                            <TextBlock Text="Fecha baja"
+                                       Grid.Row="10"
+                                       Grid.Column="0"
+                                       Style="{DynamicResource TextBlockTitulo4}" />
+                            <WC:ImgTextBlock x:Name="txbFechaBaja"
+                                             Text="{Binding UserData.User_EditTime}"
+                                             Grid.Row="10"
+                                             Grid.Column="1"
+                                             ImgSourceLeft="/Sgcm.UI.Desktop;component/Recursos/Imagenes/edit_calendar_32px.png"
+                                             IsEnabled="{Binding ActivationUIPersonControls}"
+                                             Style="{DynamicResource ImgTextBlockNormal}"
+                                             ToolTip="Fecha baja" />
+                            <!--#endregion-->
+                        </Grid>
+                    </TabItem>
+                    <!--#endregion-->
+                </TabControl>
+                <!--#region COMANDOS-->
+                <Grid>
+                    <!--#region GRID-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85" />
+                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="85" />
+                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="85" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="85" />
+                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="85" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <!--#endregion-->
+                    <WC:ImgButton x:Name="btiEdit"
+                                  Content="Editar..."
+                                  Grid.Row="1"
+                                  Grid.Column="0"
+                                  Command="{Binding EditCommand}"
+                                  ImgSource="/Recursos/Imagenes/edit_profile_32px.png"
+                                  Style="{DynamicResource ImgButtonStyleFlat}"
+                                  TabIndex="16"
+                                  ToolTip="Editar perfil">
+                    </WC:ImgButton>
+                    <WC:ImgButton x:Name="btiCancelarEdit"
+                                  Content="Cancelar..."
+                                  Grid.Row="1"
+                                  Grid.Column="2"
+                                  Command="{Binding CancelEditCommand}"
+                                  ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/cancel_32px.png"
+                                  Style="{DynamicResource ImgButtonStyleFlat}"
+                                  TabIndex="18"
+                                  ToolTip="Cancela cambios edicion">
+                    </WC:ImgButton>
+                    <WC:ImgButton x:Name="btiGuardar"
+                                  Content="Registrar..."
+                                  Grid.Row="1"
+                                  Grid.Column="4"
+                                  Command="{Binding SaveEditCommand}"
+                                  ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/save_32px.png"
+                                  Style="{DynamicResource ImgButtonStyleFlat}"
+                                  TabIndex="17"
+                                  ToolTip="Guarda los cambios">
+                    </WC:ImgButton>
+                    <WC:ImgButton x:Name="btiNuevo"
+                                  Content="Nuevo ..."
+                                  Grid.Row="1"
+                                  Grid.Column="6"
+                                  Command="{Binding CancelAllCommand}"
+                                  ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/cancel_32px.png"
+                                  Style="{DynamicResource ImgButtonStyleFlat}"
+                                  TabIndex="18"
+                                  ToolTip="Nuevo...">
+                    </WC:ImgButton>
+                    <WC:ImgButton x:Name="btiSalir"
+                                  Content="Salir ..."
+                                  Grid.Row="1"
+                                  Grid.Column="10"
+                                  Click="btiSalir_Click"
+                                  ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/cancel_32px.png"
+                                  Style="{DynamicResource ImgButtonStyleFlat}"
+                                  TabIndex="20"
+                                  ToolTip="Salir">
+                    </WC:ImgButton>
+                </Grid>
+                <!--#endregion-->
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

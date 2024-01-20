@@ -1,0 +1,12 @@
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net6.0-windows10.0.22621.0\AppTools.csproj.AssemblyReference.cache
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net6.0-windows10.0.22621.0\AppTools.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net6.0-windows10.0.22621.0\AppTools.AssemblyInfoInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net6.0-windows10.0.22621.0\AppTools.AssemblyInfo.cs
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net6.0-windows10.0.22621.0\AppTools.csproj.CoreCompileInputs.cache
+D:\Documents\LAGRP Soft\Proyectos\AppTools\bin\Debug\net6.0-windows10.0.22621.0\AppTools.deps.json
+D:\Documents\LAGRP Soft\Proyectos\AppTools\bin\Debug\net6.0-windows10.0.22621.0\AppTools.dll
+D:\Documents\LAGRP Soft\Proyectos\AppTools\bin\Debug\net6.0-windows10.0.22621.0\AppTools.pdb
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net6.0-windows10.0.22621.0\AppTools.dll
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net6.0-windows10.0.22621.0\refint\AppTools.dll
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net6.0-windows10.0.22621.0\AppTools.pdb
+D:\Documents\LAGRP Soft\Proyectos\AppTools\obj\Debug\net6.0-windows10.0.22621.0\ref\AppTools.dll

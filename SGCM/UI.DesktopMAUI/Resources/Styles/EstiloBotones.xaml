@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="UI.DesktopMAUI.Resources.Styles.EstiloBotones">
+    <!--<Style x:Key="IcoToggleButtonStyleMenuHeader1" TargetType="{x:Type WpfCtrls:IcoToggleButton}">
+    <Setter Property="Width" Value="21"/>
+    <Setter Property="Height" Value="21"/>
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="Transparent"/>
+    <Setter Property="Cursor" Value="Hand"/>
+    <Setter Property="CornerRadius" Value="5,5,5,5"/>
+    <Setter Property="MouseOverBackground" Value="Transparent"/>
+    <Setter Property="MouseOverBorderBrush" Value="{StaticResource ColorMouseOver4}"/>
+    <Setter Property="CheckedBackground" Value="Transparent"/>
+    <Setter Property="CheckedBorderBrush" Value="{StaticResource ColorMouseOver4}"/>
+    <Setter Property="PressedBackground" Value="Transparent"/>
+    <Setter Property="PressedBorderBrush" Value="{StaticResource ColorMouseOver3}"/>
+    </Style>
+
+    -->
+    <!--#region ESTILOS ICOBUTTON-->
+    <!--
+
+    <Style x:Key="IcoButtonStyleHeader1" TargetType="{x:Type WpfCtrls:IcoButton}">
+    <Setter Property="Width" Value="25"/>
+    <Setter Property="Height" Value="25"/>
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="Transparent"/>
+    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    <Setter Property="VerticalContentAlignment" Value="Center"/>
+    <Setter Property="Padding" Value="1"/>
+    <Setter Property="CornerRadius" Value="5"/>
+    <Setter Property="MouseOverBorderBrush" Value="{StaticResource ColorMouseOver4}"/>
+    <Setter Property="PressedBorderBrush" Value="{StaticResource ColorMouseOver3}"/>
+    </Style>
+
+    <Style x:Key="IcoButtonStyleBase0" TargetType="{x:Type WpfCtrls:IcoButton}">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="Transparent"/>
+    <Setter Property="Padding" Value="1"/>
+    <Setter Property="CornerRadius" Value="3"/>
+    <Setter Property="Margin" Value="2"/>
+    <Setter Property="Height" Value="20"/>
+    <Setter Property="Width" Value="20"/>
+    <Setter Property="Cursor" Value="Hand"/>
+    <Setter Property="MouseOverBorderBrush" Value="{StaticResource ColorMouseOver4}"/>
+    <Setter Property="PressedBorderBrush" Value="{StaticResource ColorMouseOver3}"/>
+    <Setter Property="VerticalAlignment" Value="Top"/>
+    </Style>
+
+    <Style x:Key="IcoButtonStyleLista" TargetType="{x:Type WpfCtrls:IcoButton}">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="Transparent"/>
+    <Setter Property="Padding" Value="1"/>
+    <Setter Property="CornerRadius" Value="3"/>
+    <Setter Property="Height" Value="14"/>
+    <Setter Property="Width" Value="14"/>
+    <Setter Property="Cursor" Value="Hand"/>
+    <Setter Property="MouseOverBorderBrush" Value="{StaticResource ColorMouseOver4}"/>
+    <Setter Property="PressedBorderBrush" Value="{StaticResource ColorMouseOver3}"/>
+    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    -->
+    <!--#endregion-->
+    <!--
+
+    <Style x:Key="OptButtonStyleSideBar1" TargetType="{x:Type WpfCtrls:OptButton}">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}"/>
+    <Setter Property="CornerRadius" Value="5,0,0,5"/>
+    <Setter Property="Padding" Value="12,0,0,0"/>
+    <Setter Property="Margin" Value="3,0,-1,0"/>
+    <Setter Property="Height" Value="30"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="ImgAlto" Value="20"/>
+    <Setter Property="ImgAncho" Value="20"/>
+    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+    <Setter Property="VerticalContentAlignment" Value="Center"/>
+    <Setter Property="MouseOverBackground" Value="{StaticResource ColorMouseOver2}"/>
+    <Setter Property="MouseOverForeground" Value="{StaticResource ColorTitulo1}"/>
+    <Setter Property="PressedBorderBrush" Value="{StaticResource ColorMouseOver2}"/>
+    <Setter Property="PressedBackground" Value="{StaticResource ColorMouseOver2}"/>
+    <Setter Property="CheckedBackground" Value="{StaticResource ColorMouseOver2}"/>
+    <Setter Property="CheckedBorderBrush" Value="{StaticResource ColorMouseOver2}"/>
+    <Setter Property="CheckedForeground" Value="{StaticResource ColorTitulo2}"/>
+    </Style>
+
+    <Style x:Key="OptButtonStyleSideBar2" TargetType="{x:Type WpfCtrls:OptButton}">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}"/>
+    <Setter Property="CornerRadius" Value="5,0,0,5"/>
+    <Setter Property="Padding" Value="10,0,0,0"/>
+    <Setter Property="Margin" Value="3,0,-1,0"/>
+    <Setter Property="Height" Value="30"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="ImgAlto" Value="20"/>
+    <Setter Property="ImgAncho" Value="20"/>
+    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+    <Setter Property="VerticalContentAlignment" Value="Center"/>
+    <Setter Property="MouseOverBackground" Value="{StaticResource ColorMouseOver1}"/>
+    <Setter Property="MouseOverForeground" Value="{StaticResource ColorTitulo1}"/>
+    <Setter Property="PressedBorderBrush" Value="{StaticResource ColorMouseOver1}"/>
+    <Setter Property="PressedBackground" Value="{StaticResource ColorMouseOver1}"/>
+    <Setter Property="CheckedBackground" Value="{StaticResource ColorMouseOver1}"/>
+    <Setter Property="CheckedBorderBrush" Value="{StaticResource ColorMouseOver1}"/>
+    <Setter Property="CheckedForeground" Value="{StaticResource ColorTitulo2}"/>
+    </Style>
+
+    <Style x:Key="ImgButtonStyleFlatAlineado" TargetType="{x:Type WpfCtrls:ImgButton}">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}"/>
+    <Setter Property="CornerRadius" Value="5,0,0,5"/>
+    <Setter Property="Padding" Value="10,0,0,0"/>
+    <Setter Property="Margin" Value="3,0,-1,0"/>
+    <Setter Property="Height" Value="30"/>
+    <Setter Property="ImgAlto" Value="20"/>
+    <Setter Property="ImgAncho" Value="20"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="VerticalContentAlignment" Value="Center"/>
+    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+    <Setter Property="MouseOverBackground" Value="{StaticResource ColorMouseOver2}"/>
+    <Setter Property="MouseOverForeground" Value="{StaticResource ColorTitulo1}"/>
+    <Setter Property="PressedBorderBrush" Value="{StaticResource ColorMouseOver2}"/>
+    <Setter Property="PressedBackground" Value="{StaticResource ColorMouseOver2}"/>
+    </Style>
+
+    <Style x:Key="ImgButtonStyleFlat" TargetType="{x:Type WpfCtrls:ImgButton}">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="Transparent"/>
+    <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}"/>
+    <Setter Property="CornerRadius" Value="5,5,5,5"/>
+    <Setter Property="Padding" Value="5,0,0,0"/>
+    <Setter Property="Margin" Value="3,0,3,0"/>
+    <Setter Property="BorderThickness" Value="1"/>
+    <Setter Property="ImgAncho" Value="15"/>
+    <Setter Property="ImgAlto" Value="15"/>
+    <Setter Property="Height" Value="25"/>
+    <Setter Property="VerticalContentAlignment" Value="Center"/>
+    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+    <Setter Property="MouseOverBackground" Value="{StaticResource ColorMouseOver2}"/>
+    <Setter Property="MouseOverForeground" Value="{StaticResource ColorTitulo1}"/>
+    </Style>-->
+</ResourceDictionary>

@@ -1,0 +1,30 @@
+﻿@model List<Sgcm.App.DTOs.AuxiliaryDto.PhoneOperatorDto>
+
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Logo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.Opet_id</td>
+                <td>@m.Opet_name</td>
+                <td>@m.Opet_logo</td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>

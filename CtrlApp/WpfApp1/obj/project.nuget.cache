@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "wwa1/n8ybCawFnCHGNNjDf0olYUf35iZ8ojGwAY7zyv++OmutnnndjjQfCYytFzWn3lvu5JOZuLSst7XaXxztQ==",
+  "success": true,
+  "projectFilePath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\CtrlApp\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lagrp\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\lagrp\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\lagrp\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

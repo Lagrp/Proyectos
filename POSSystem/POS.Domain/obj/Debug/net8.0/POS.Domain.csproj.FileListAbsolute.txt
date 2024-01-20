@@ -1,0 +1,15 @@
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\bin\Debug\net8.0\POS.Domain.deps.json
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\bin\Debug\net8.0\POS.Domain.runtimeconfig.json
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\bin\Debug\net8.0\POS.Domain.dll
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\bin\Debug\net8.0\POS.Domain.pdb
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\POS.Domain.csproj.AssemblyReference.cache
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\POS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\POS.Domain.AssemblyInfoInputs.cache
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\POS.Domain.AssemblyInfo.cs
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\POS.Domain.csproj.CoreCompileInputs.cache
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\POS.Domain.sourcelink.json
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\POS.Domain.dll
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\refint\POS.Domain.dll
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\POS.Domain.pdb
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\POS.Domain.genruntimeconfig.cache
+D:\LAGRPSoft\Proyectos\POSSystem\POS.Domain\obj\Debug\net8.0\ref\POS.Domain.dll

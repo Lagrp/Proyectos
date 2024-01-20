@@ -1,0 +1,20 @@
+﻿WpfCtrls
+1.0.0.0
+
+library
+C#
+.cs
+D:\Documents\LAGRP Soft\Proyectos\CtrlApp\WpfCtrls\obj\Debug\net8.0-windows10.0.22621.0\
+WpfCtrls
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+
+11317557288
+
+15-764381230
+2031079762832
+ChipButton.xaml;IcoButton.xaml;IcoToggleButton.xaml;ImgButton.xaml;ImgLinkButton.xaml;ImgTextBlock.xaml;ImgToggleButton.xaml;OptButton.xaml;PhComboBox.xaml;PhPasswordBox.xaml;PhTextBox.xaml;
+
+False
+

@@ -1,0 +1,461 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\UI.Desktop\\Sgcm.UI.Desktop.csproj": {}
+  },
+  "projects": {
+    "D:\\Documentos\\LAGRPSoft\\Proyectos\\AppTools\\AppTools.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\LAGRPSoft\\Proyectos\\AppTools\\AppTools.csproj",
+        "projectName": "AppTools",
+        "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\AppTools\\AppTools.csproj",
+        "packagesPath": "C:\\Users\\lagrp\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\AppTools\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lagrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\LAGRPSoft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\LAGRPSoft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj",
+        "projectName": "WpfCtrls",
+        "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj",
+        "packagesPath": "C:\\Users\\lagrp\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\CtrlApp\\WpfCtrls\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lagrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows7.0",
+            "projectReferences": {
+              "D:\\Documentos\\LAGRPSoft\\Proyectos\\AppTools\\AppTools.csproj": {
+                "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\AppTools\\AppTools.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
+          "dependencies": {
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.39, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj",
+        "projectName": "Sgcm.App",
+        "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj",
+        "packagesPath": "C:\\Users\\lagrp\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lagrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.Dominio\\Sgcm.Dominio.csproj": {
+                "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.Dominio\\Sgcm.Dominio.csproj"
+              },
+              "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraData\\Sgcm.InfraData.csproj": {
+                "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraData\\Sgcm.InfraData.csproj"
+              },
+              "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj": {
+                "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.Dominio\\Sgcm.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.Dominio\\Sgcm.Dominio.csproj",
+        "projectName": "Sgcm.Dominio",
+        "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.Dominio\\Sgcm.Dominio.csproj",
+        "packagesPath": "C:\\Users\\lagrp\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lagrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraData\\Sgcm.InfraData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraData\\Sgcm.InfraData.csproj",
+        "projectName": "Sgcm.InfraData",
+        "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraData\\Sgcm.InfraData.csproj",
+        "packagesPath": "C:\\Users\\lagrp\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraData\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lagrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.Dominio\\Sgcm.Dominio.csproj": {
+                "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.Dominio\\Sgcm.Dominio.csproj"
+              },
+              "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj": {
+                "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj",
+        "projectName": "Sgcm.InfraSoporte",
+        "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\Sgcm.InfraSoporte.csproj",
+        "packagesPath": "C:\\Users\\lagrp\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.InfraSoporte\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lagrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\UI.Desktop\\Sgcm.UI.Desktop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\UI.Desktop\\Sgcm.UI.Desktop.csproj",
+        "projectName": "Sgcm.UI.Desktop",
+        "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\UI.Desktop\\Sgcm.UI.Desktop.csproj",
+        "packagesPath": "C:\\Users\\lagrp\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\UI.Desktop\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lagrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows7.0",
+            "projectReferences": {
+              "D:\\Documentos\\LAGRPSoft\\Proyectos\\AppTools\\AppTools.csproj": {
+                "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\AppTools\\AppTools.csproj"
+              },
+              "D:\\Documentos\\LAGRPSoft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj": {
+                "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\CtrlApp\\WpfCtrls\\WpfCtrls.csproj"
+              },
+              "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj": {
+                "projectPath": "D:\\Documentos\\LAGRPSoft\\Proyectos\\SGCM\\Sgcm.API\\Sgcm.App.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

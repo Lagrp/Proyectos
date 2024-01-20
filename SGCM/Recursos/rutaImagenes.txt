@@ -1,0 +1,15 @@
+                                    <WpfCtrls:IcoButton x:Name="btiEdit"
+                                                        Style="{DynamicResource IcoButtonStyleLista}"
+                                                        Grid.Column="1"
+                                                        ImgSource="/UI.Desktop;component/Recursos/Imagenes/edit_32px.png" />
+                                    <WpfCtrls:IcoButton x:Name="btiUpdate"
+                                                        Style="{DynamicResource IcoButtonStyleLista}"
+                                                        Grid.Column="2"
+                                                        ImgSource="/UI.Desktop;component/Recursos/Imagenes/upload_24px.png" />
+
+
+
+
+FabianRios201133
+
+/UI.Desktop;component/Recursos/Imagenes/

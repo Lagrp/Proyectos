@@ -1,0 +1,169 @@
+﻿<RadioButton
+    x:Class="WpfCtrls.OptButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfCtrls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="optButton"
+    d:DesignHeight="26"
+    d:DesignWidth="120"
+    SnapsToDevicePixels="True"
+    mc:Ignorable="d">
+
+    <RadioButton.Template>
+        <ControlTemplate TargetType="{x:Type RadioButton}">
+            <Border
+                x:Name="radioButtonBorder"
+                Padding="0"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{Binding CornerRadius}"
+                DataContext="{Binding Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:OptButton}}}"
+                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                <StackPanel
+                    x:Name="templateRoot"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Orientation="{Binding Orientacion}"
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                    <Image
+                        x:Name="imgL"
+                        Width="{Binding ImgAncho}"
+                        Height="{Binding ImgAlto}"
+                        Margin="{Binding ImgMargen}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        IsEnabled="{TemplateBinding IsEnabled}"
+                        Source="{Binding ImgSource}"
+                        Stretch="{Binding ImgStretch}" />
+                    <ContentPresenter
+                        x:Name="contentPresenter"
+                        Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        RecognizesAccessKey="True"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                </StackPanel>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="FontSize" Value="{Binding MouseOverFontSize, RelativeSource={RelativeSource Self}}" />
+                    <Setter Property="FontStyle" Value="{Binding MouseOverFontStyle, RelativeSource={RelativeSource Self}}" />
+                    <Setter Property="FontWeight" Value="{Binding MouseOverFontWeight, RelativeSource={RelativeSource Self}}" />
+                    <Setter Property="Foreground" Value="{Binding MouseOverForeground, RelativeSource={RelativeSource Self}}" />
+                    <Setter TargetName="radioButtonBorder" Property="Background" Value="{Binding MouseOverBackground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:OptButton}}}" />
+                    <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{Binding MouseOverBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:OptButton}}}" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="radioButtonBorder" Property="Background" Value="{Binding PressedBackground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:OptButton}}}" />
+                    <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{Binding PressedBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:OptButton}}}" />
+                    <Setter TargetName="radioButtonBorder" Property="BorderThickness" Value="{Binding PressedBorderThickness, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:OptButton}}}" />
+                </Trigger>
+                <Trigger Property="IsChecked" Value="true">
+                    <Setter Property="FontSize" Value="{Binding CheckedFontSize, RelativeSource={RelativeSource Self}}" />
+                    <Setter Property="FontStyle" Value="{Binding CheckedFontStyle, RelativeSource={RelativeSource Self}}" />
+                    <Setter Property="FontWeight" Value="{Binding CheckedFontWeight, RelativeSource={RelativeSource Self}}" />
+                    <Setter Property="Foreground" Value="{Binding CheckedForeground, RelativeSource={RelativeSource Self}}" />
+                    <Setter TargetName="radioButtonBorder" Property="Background" Value="{Binding CheckedBackground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:OptButton}}}" />
+                    <Setter TargetName="radioButtonBorder" Property="BorderBrush" Value="{Binding CheckedBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:OptButton}}}" />
+                    <Setter TargetName="radioButtonBorder" Property="BorderThickness" Value="{Binding CheckedBorderThickness, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:OptButton}}}" />
+                </Trigger>
+                <!--<Trigger Property="IsChecked" Value="{x:Null}">
+                    <Setter Property="Background" TargetName="radioButtonBorder"  Value="{Binding Background, RelativeSource={RelativeSource Self}}" />
+                -->
+                <!--<Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{Binding CheckedBorderBrush, RelativeSource={RelativeSource Self}}" />
+                    <Setter Property="BorderThickness" TargetName="radioButtonBorder" Value="{Binding CheckedBorderThickness, RelativeSource={RelativeSource Self}}" />
+                    <Setter Property="Foreground" Value="{Binding CheckedForeground, RelativeSource={RelativeSource Self}}" />-->
+                <!--
+                </Trigger>-->
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </RadioButton.Template>
+</RadioButton>
+
+<!--<Window.Resources>
+    <Style x:Key="FocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="OptionMarkFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Margin="14,0,0,0" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <SolidColorBrush x:Key="RadioButton.Static.Background" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="RadioButton.Static.Border" Color="#FF707070" />
+    <SolidColorBrush x:Key="RadioButton.Static.Glyph" Color="#FF212121" />
+    <SolidColorBrush x:Key="RadioButton.MouseOver.Background" Color="#FFF3F9FF" />
+    <SolidColorBrush x:Key="RadioButton.MouseOver.Border" Color="#FF5593FF" />
+    <SolidColorBrush x:Key="RadioButton.MouseOver.Glyph" Color="#FF212121" />
+    <SolidColorBrush x:Key="RadioButton.Pressed.Background" Color="#FFD9ECFF" />
+    <SolidColorBrush x:Key="RadioButton.Pressed.Border" Color="#FF3C77DD" />
+    <SolidColorBrush x:Key="RadioButton.Pressed.Glyph" Color="#FF212121" />
+    <SolidColorBrush x:Key="RadioButton.Disabled.Background" Color="#FFE6E6E6" />
+    <SolidColorBrush x:Key="RadioButton.Disabled.Border" Color="#FFBCBCBC" />
+    <SolidColorBrush x:Key="RadioButton.Disabled.Glyph" Color="#FF707070" />
+    <Style x:Key="RadioButtonStyle1" TargetType="{x:Type RadioButton}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+        <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}" />
+        <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="radioButtonBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="100" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,1,2,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                            <Grid x:Name="markGrid" Margin="2">
+                                <Ellipse x:Name="optionMark" Fill="{StaticResource RadioButton.Static.Glyph}" MinWidth="6" MinHeight="6" Opacity="0" />
+                            </Grid>
+                        </Border>
+                        <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasContent" Value="true">
+                            <Setter Property="FocusVisualStyle" Value="{StaticResource OptionMarkFocusVisual}" />
+                            <Setter Property="Padding" Value="4,-1,0,0" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.MouseOver.Background}" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.MouseOver.Border}" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Disabled.Background}" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Disabled.Border}" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.Disabled.Glyph}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Pressed.Background}" />
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Pressed.Border}" />
+                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.Pressed.Glyph}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Opacity" TargetName="optionMark" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter Property="Opacity" TargetName="optionMark" Value="0.56" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</Window.Resources>-->

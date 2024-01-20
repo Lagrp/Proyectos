@@ -1,0 +1,119 @@
+﻿<Page x:Class="Sgcm.UI.Desktop.Vistas.PatientView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="clr-namespace:Sgcm.UI.Desktop.VistaModelo"
+      xmlns:wc="clr-namespace:WpfCtrls;assembly=WpfCtrls"
+      Title="PatientView"
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:PatientVM />
+    </Page.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="180" />
+            </Grid.ColumnDefinitions>
+            <wc:PhTextBox x:Name="txtSearch"
+                          PlaceholderText="Buscar paciente..."
+                          Style="{StaticResource PhTextBoxNormal}" />
+            <wc:IcoButton x:Name="btnSearch"
+                          Grid.Column="1"
+                          ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/search_user_injured_32px.png"
+                          Style="{StaticResource IcoButtonStyleBody}" />
+            <wc:ImgButton x:Name="btnNewPatient"
+                          Content="Nuevo paciente"
+                          Grid.Column="3"
+                          ImgSource="/Sgcm.UI.Desktop;component/Recursos/Imagenes/add_user_injured_32px.png"
+                          Style="{StaticResource ImgButtonStyleFlat}"
+                          ToolTip="Nuevo paciente..." />
+        </Grid>
+        <DataGrid x:Name="dgPatient"
+                  Grid.Row="2"
+                  CellStyle="{DynamicResource DataGridCellStyle1}"
+                  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
+                  ItemsSource="{Binding Patients}"
+                  RowStyle="{DynamicResource DataGridRowStyle1}"
+                  Style="{DynamicResource DataGridStyle1}">
+            <!--<DataGrid.Columns>
+                <DataGridCheckBoxColumn Width="Auto"
+                                        CanUserResize="False">
+                    <DataGridCheckBoxColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <CheckBox />
+                        </DataTemplate>
+                    </DataGridCheckBoxColumn.HeaderTemplate>
+                </DataGridCheckBoxColumn>
+                <DataGridTextColumn Width="Auto"
+                                    CanUserResize="False"
+                                    Header="#"
+                                    IsReadOnly="True" />
+                <DataGridTemplateColumn Width="*"
+                                        Header="Nombre"
+                                        IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Border Width="25"
+                                        Height="25"
+                                        Margin="0,0,10,0"
+                                        Background="Red"
+                                        CornerRadius="50">
+                                    <TextBlock Text="..."
+                                               Margin="0,0,0,1"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Foreground="White" />
+                                </Border>
+                                <TextBlock Text="..."
+                                           VerticalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Width="*"
+                                    Header="Edad"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Width="*"
+                                    Header="Genero"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Width="*"
+                                    Header="Email"
+                                    IsReadOnly="True" />
+                <DataGridTemplateColumn Width="*"
+                                        Header="Telefono"
+                                        IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="hola/" />
+            -->
+            <!--<Button Style="{StaticResource gridEditButton}">
+                                <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource gridButtonIcon}" />
+                                </Button>
+                                <Button Style="{StaticResource gridRemoveButton}">
+                                <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource gridButtonIcon}" />-->
+            <!--</Button>-->
+            <!--
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>-->
+        </DataGrid>
+    </Grid>
+</Page>

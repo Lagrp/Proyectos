@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Vistas\ConfiguracionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\ConfigView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\DashboardView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\EditPasswordView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\PersonEditView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\MyAccountView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\OrganizacionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\PatientView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\ProfileView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\UsersView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Recursos\Diccionarios\EstiloTabuladores.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Recursos\Diccionarios\EstiloCombos.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Recursos\Diccionarios\EstiloDataGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Recursos\Diccionarios\EstiloListas.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Recursos\Diccionarios\EstilosDatePiker.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Recursos\Diccionarios\EstiloBotones.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Recursos\Diccionarios\Estilo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Recursos\Diccionarios\EstiloTextos.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Recursos\Diccionarios\IUColors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\ConfiguracionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\ConfigView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\DashboardView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\EditPasswordView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\PersonEditView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\MainView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\MyAccountView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\OrganizacionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\PatientView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\ProfileView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\UsersView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

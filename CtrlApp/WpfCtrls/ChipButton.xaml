@@ -1,0 +1,55 @@
+﻿<Label
+    x:Class="WpfCtrls.ChipButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfCtrls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="chipButton"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    d:DesignHeight="25"
+    d:DesignWidth="120"
+    Cursor="Hand"
+    mc:Ignorable="d">
+
+    <Label.Template>
+        <ControlTemplate TargetType="{x:Type Label}">
+            <Border
+                x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChipButton}}}"
+                SnapsToDevicePixels="true">
+                <StackPanel
+                    x:Name="stackPanel"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Orientation="{Binding Orientacion, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChipButton}}}"
+                    SnapsToDevicePixels="True">
+                    <Ellipse
+                        x:Name="EllIco"
+                        Width="{Binding ImgAncho, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChipButton}}}"
+                        Height="{Binding ImgAlto, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChipButton}}}"
+                        Margin="{Binding ImgMargen, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChipButton}}}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Stroke="{Binding ImgBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChipButton}}}">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="{Binding ImgSource, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChipButton}}}" Stretch="{Binding ImgStretch, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ChipButton}}}" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <ContentPresenter
+                        x:Name="contentPresenter"
+                        Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Focusable="False"
+                        RecognizesAccessKey="True"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                </StackPanel>
+            </Border>
+        </ControlTemplate>
+    </Label.Template>
+</Label>

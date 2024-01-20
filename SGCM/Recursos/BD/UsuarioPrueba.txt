@@ -1,0 +1,1 @@
+INSERT INTO `sgcmdb`.`usuarios` (`usu_personaId`, `usu_perfilId`, `usu_especialidad`, `usu_colegiatura`, `usu_loguin`, `usu_password`, `usu_foto`, `usu_estado`) VALUES ('118019482', '1', 'Administrador', 'xxxxxx', 'larp', 'luan3306', '/Recursos/Imagenes/118019482.png', '1');

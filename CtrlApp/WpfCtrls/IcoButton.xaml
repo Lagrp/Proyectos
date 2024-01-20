@@ -1,0 +1,46 @@
+﻿<Button
+    x:Class="WpfCtrls.IcoButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfCtrls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="icoButton"
+    d:DesignHeight="40"
+    d:DesignWidth="40"
+    mc:Ignorable="d">
+
+    <Button.Template>
+        <ControlTemplate TargetType="{x:Type Button}">
+            <Border
+                x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{Binding CornerRadius}"
+                DataContext="{Binding Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:IcoButton}}}"
+                SnapsToDevicePixels="true">
+                <Image
+                    x:Name="imgIco"
+                    Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    IsEnabled="{TemplateBinding IsEnabled}"
+                    Source="{Binding ImgSource}"
+                    Stretch="{Binding ImgStretch}" />
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="border" Property="Background" Value="{Binding MouseOverBackground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:IcoButton}}}" />
+                    <Setter TargetName="border" Property="BorderBrush" Value="{Binding MouseOverBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:IcoButton}}}" />
+                    <Setter TargetName="border" Property="BorderThickness" Value="{Binding MouseOverBorderThickness, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:IcoButton}}}" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="border" Property="Background" Value="{Binding PressedBackground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:IcoButton}}}" />
+                    <Setter TargetName="border" Property="BorderBrush" Value="{Binding PressedBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:IcoButton}}}" />
+                    <Setter TargetName="border" Property="BorderThickness" Value="{Binding PressedBorderThickness, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:IcoButton}}}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Button.Template>
+</Button>

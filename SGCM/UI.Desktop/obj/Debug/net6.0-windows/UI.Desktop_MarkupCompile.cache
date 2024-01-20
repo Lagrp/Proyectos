@@ -1,0 +1,20 @@
+﻿UI.Desktop
+
+
+winexe
+C#
+.cs
+D:\Documents\LAGRP Soft\Proyectos\SGCM\UI.Desktop\obj\Debug\net6.0-windows\
+UI.Desktop
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+D:\Documents\LAGRP Soft\Proyectos\SGCM\UI.Desktop\App.xaml
+121534258252
+
+16-1314362155
+2111366350820
+Recursos\Diccionarios\EstiloBotones.xaml;Recursos\Diccionarios\EstiloComboBox.xaml;Recursos\Diccionarios\EstilosDatePiker.xaml;Recursos\Diccionarios\EstiloTextos.xaml;Recursos\Diccionarios\IUColors.xaml;Vistas\ConfigView.xaml;Vistas\EditPasswordView.xaml;Vistas\Login.xaml;Vistas\MainView.xaml;Vistas\MiCuenta.xaml;Vistas\PerfilView.xaml;Vistas\PersonaView.xaml;
+
+True
+

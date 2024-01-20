@@ -1,0 +1,26 @@
+CREATE TABLE `persons` (
+  `person_id` varchar(15) NOT NULL,
+  `per_doctype` tinyint unsigned NOT NULL,
+  `per_docnumber` varchar(15) NOT NULL,
+  `per_name` varchar(100) NOT NULL,
+  `per_secondname` varchar(100) DEFAULT NULL,
+  `per_surname` varchar(100) NOT NULL,
+  `per_secondsurname` varchar(100) NOT NULL,
+  `per_birthday` datetime NOT NULL,
+  `per_genderid` tinyint unsigned NOT NULL,
+  `per_address` varchar(150) NOT NULL,
+  `per_ubigeo` mediumint unsigned NOT NULL,
+  `per_ruc` varchar(15) DEFAULT NULL,
+  `per_photo` bit(1) DEFAULT NULL,
+  `per_createtime` datetime DEFAULT NULL,
+  `per_edittime` datetime DEFAULT NULL,
+  `per_canceltime` datetime DEFAULT NULL,
+  PRIMARY KEY (`person_id`),
+  KEY `fk_docktype_idx` (`per_doctype`),
+  KEY `fk_ubigeo_idx` (`per_ubigeo`),
+  KEY `fk_gender_idx` (`per_genderid`),
+  CONSTRAINT `fk_docktype` FOREIGN KEY (`per_doctype`) REFERENCES `doctypes` (`tdoc_id`),
+  CONSTRAINT `fk_gender` FOREIGN KEY (`per_genderid`) REFERENCES `genders` (`gen_id`),
+  CONSTRAINT `fk_ubigeo` FOREIGN KEY (`per_ubigeo`) REFERENCES `ubigeo` (`ubdis_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+SELECT * FROM sgcmdb.persons;

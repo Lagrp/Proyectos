@@ -1,0 +1,292 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=netstandard"
+                    xmlns:WpfCtrls="clr-namespace:WpfCtrls;assembly=WpfCtrls">
+
+    <!--#region Tamaño FUENTE-->
+    <System:Double x:Key="FuenteTitulo1">24</System:Double>
+    <System:Double x:Key="FuenteTitulo2">21</System:Double>
+    <System:Double x:Key="FuenteTitulo3">15</System:Double>
+    <System:Double x:Key="FuenteTitulo4">12</System:Double>
+    <System:Double x:Key="FuenteNormal">12</System:Double>
+    <System:Double x:Key="FuenteSmall">10</System:Double>
+    <System:Double x:Key="FuenteSmaller">7</System:Double>
+    <!--#endregion-->
+
+    <!--#region PARRAFOS-->
+    <Thickness x:Key="ParrafoTitulo1">5,0,0,20</Thickness>
+    <Thickness x:Key="ParrafoTitulo2">5,0,0,16</Thickness>
+    <Thickness x:Key="ParrafoTitulo3">5,0,0,12</Thickness>
+    <Thickness x:Key="ParrafoTitulo4">5,3,0,8</Thickness>
+    <Thickness x:Key="ParrafoNormal">5,3,0,8</Thickness>
+    <Thickness x:Key="ParrafoLink">5,10,0,8</Thickness>
+    <Thickness x:Key="ParrafoLista">0,0,0,0</Thickness>
+    <Thickness x:Key="AnchoBordeControl">0,0,0,1</Thickness>
+    <CornerRadius x:Key="RadioBordeControl">3,3,3,3</CornerRadius>
+    <!--#endregion-->
+
+    <System:Double x:Key="TamañoImagenControlNormal">18</System:Double>
+    <System:Double x:Key="TamañoImagenControlSmall">12</System:Double>
+    <System:Double x:Key="TamañoImagenControlCapline">5</System:Double>
+    <System:Double x:Key="TamañoImagenControlVacia">0</System:Double>
+
+    <!--<System:Double x:Key="FuenteSmaller">7</System:Double>-->
+
+    <!--#region Estilos TITULO (TextBlock)-->
+    <Style x:Key="TextBlockTitulo1"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTitulo1}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteTitulo1}" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoTitulo1}" />
+    </Style>
+
+    <Style x:Key="TextBlockTitulo2"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTitulo1}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteTitulo2}" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoTitulo2}" />
+    </Style>
+
+    <Style x:Key="TextBlockTitulo3"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTitulo2}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteTitulo3}" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoTitulo3}" />
+    </Style>
+
+    <Style x:Key="TextBlockTitulo4"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTitulo3}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteTitulo4}" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoTitulo4}" />
+        <Setter Property="Padding" Value="5,0,0,0" />
+    </Style>
+
+    <Style x:Key="ImgTextBlockTitulo4"
+           TargetType="{x:Type WpfCtrls:ImgTextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTitulo4}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteTitulo4}" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="ImgAltoLeft" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgAnchoLeft" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgMargenLeft" Value="0,0,0,0" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoTitulo4}" />
+        <Setter Property="Padding" Value="5,0,0,0" />
+    </Style>
+    <!--#endregion-->
+
+    <!--#region TEXTO NORMAL-->
+    <Style x:Key="PhTextBoxNormal"
+           TargetType="{x:Type WpfCtrls:PhTextBox}">
+        <Setter Property="Background" Value="{StaticResource ColorFondoControl}" />
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteNormal}" />
+        <Setter Property="BorderThickness" Value="{StaticResource AnchoBordeControl}" />
+        <Setter Property="CornerRadius" Value="{StaticResource RadioBordeControl}" />
+        <Setter Property="ImgAltoLeft" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgAnchoLeft" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgMargenLeft" Value="0,0,0,0" />
+        <Setter Property="ImgAltoRight" Value="{StaticResource TamañoImagenControlCapline}" />
+        <Setter Property="ImgAnchoRight" Value="5" />
+        <Setter Property="ImgMargenRight" Value="0,0,0,0" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoNormal}" />
+        <Setter Property="MouseOverBorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="KeyboardFocusedBorderBrush" Value="{StaticResource ColorBordeControl}" />
+    </Style>
+
+    <Style x:Key="TextBoxNormal"
+           TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="{StaticResource ColorFondoControl}" />
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteNormal}" />
+        <Setter Property="BorderThickness" Value="{StaticResource AnchoBordeControl}" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoNormal}" />
+    </Style>
+
+    <Style x:Key="TextBlockNormal"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteNormal}" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoNormal}" />
+    </Style>
+
+    <Style x:Key="PhPasswordBoxNormal"
+           TargetType="{x:Type WpfCtrls:PhPasswordBox}">
+        <Setter Property="Background" Value="{StaticResource ColorFondoControl}" />
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteNormal}" />
+        <Setter Property="BorderThickness" Value="{StaticResource AnchoBordeControl}" />
+        <Setter Property="CornerRadius" Value="{StaticResource RadioBordeControl}" />
+        <Setter Property="ImgAlto" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgAncho" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgMargen" Value="0,0,5,0" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoNormal}" />
+        <Setter Property="MouseOverBorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="KeyboardFocusedBorderBrush" Value="{StaticResource ColorBordeControl}" />
+    </Style>
+
+    <Style x:Key="ImgTextBlockNormal"
+           TargetType="{x:Type WpfCtrls:ImgTextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteNormal}" />
+        <Setter Property="BorderThickness" Value="{StaticResource AnchoBordeControl}" />
+        <Setter Property="CornerRadius" Value="{StaticResource RadioBordeControl}" />
+        <Setter Property="ImgAltoLeft" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgAnchoLeft" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgAltoRight" Value="{StaticResource TamañoImagenControlCapline}" />
+        <Setter Property="ImgAnchoRight" Value="{StaticResource TamañoImagenControlCapline}" />
+        <Setter Property="ImgMargenLeft" Value="0,0,5,0" />
+        <Setter Property="ImgMargenRight" Value="5,0,0,0" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoNormal}" />
+    </Style>
+
+    <Style x:Key="PhTextBoxTarjetaNormal"
+           TargetType="{x:Type WpfCtrls:PhTextBox}">
+        <Setter Property="Background" Value="{StaticResource ColorFondoControl}" />
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteNormal}" />
+        <Setter Property="ImgAltoLeft" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgAnchoLeft" Value="{StaticResource TamañoImagenControlNormal}" />
+        <Setter Property="ImgMargenLeft" Value="0,0,0,0" />
+        <Setter Property="ImgAltoRight" Value="{StaticResource TamañoImagenControlCapline}" />
+        <Setter Property="ImgAnchoRight" Value="5" />
+        <Setter Property="ImgMargenRight" Value="0,0,0,0" />
+        <Setter Property="MouseOverBorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="KeyboardFocusedBorderBrush" Value="{StaticResource ColorBordeControl}" />
+    </Style>
+
+
+    <!--#endregion-->
+
+    <!--#region TEXTO SMALL-->
+    <Style x:Key="PhTextBoxSmall"
+           TargetType="{x:Type WpfCtrls:PhTextBox}">
+        <Setter Property="Background" Value="{StaticResource ColorFondoControl}" />
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteSmall}" />
+        <Setter Property="PHFontSize" Value="{StaticResource FuenteSmall}" />
+        <Setter Property="BorderThickness" Value="0,0,0,0" />
+        <Setter Property="CornerRadius" Value="{StaticResource RadioBordeControl}" />
+        <Setter Property="ImgAltoLeft" Value="{StaticResource TamañoImagenControlSmall}" />
+        <Setter Property="ImgAnchoLeft" Value="{StaticResource TamañoImagenControlSmall}" />
+        <Setter Property="ImgAltoRight" Value="{StaticResource TamañoImagenControlVacia}" />
+        <Setter Property="ImgAnchoRight" Value="{StaticResource TamañoImagenControlVacia}" />
+        <Setter Property="ImgMargenLeft" Value="0" />
+        <Setter Property="MouseOverBorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="KeyboardFocusedBorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style x:Key="TextBoxSmall"
+           TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="{StaticResource ColorFondoControl}" />
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteSmall}" />
+        <Setter Property="BorderThickness" Value="0,0,0,0" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoLista}" />
+    </Style>
+    <Style x:Key="TextBlockSmall"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteSmall}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <Style x:Key="PhTextSmaller"
+           TargetType="{x:Type WpfCtrls:PhTextBox}">
+        <Setter Property="Background" Value="{StaticResource ColorFondoControl}" />
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ColorBordeControl}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteSmaller}" />
+        <Setter Property="CornerRadius" Value="{StaticResource RadioBordeControl}" />
+        <Setter Property="ImgAltoLeft" Value="7" />
+        <Setter Property="ImgAnchoLeft" Value="7" />
+        <Setter Property="ImgAltoRight" Value="3" />
+        <Setter Property="ImgAnchoRight" Value="3" />
+    </Style>
+
+    <Style x:Key="TextBlockSmaller"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteSmaller}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <Style x:Key="Hiperlink"
+           TargetType="{x:Type WpfCtrls:ImgLinkButton}">
+        <Setter Property="FontSize" Value="{StaticResource FuenteSmall}" />
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region TEXTOS ESPECIALES UI-->
+
+    <Style x:Key="TextBlockTituloTarjeta"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Background" Value="{StaticResource ColorPantallaSection}" />
+        <Setter Property="Foreground" Value="{StaticResource ColorTitulo4}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteTitulo4}" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Padding" Value="5,0,0,0" />
+    </Style>
+
+    <Style x:Key="ImgTextBlockTituloTarjeta"
+           TargetType="{x:Type WpfCtrls:ImgTextBlock}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{StaticResource ColorTitulo4}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteTitulo4}" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Padding" Value="5,0,0,0" />
+        <Setter Property="ImgAltoLeft" Value="15" />
+        <Setter Property="ImgAnchoLeft" Value="15" />
+    </Style>
+
+
+
+    <Style x:Key="TextoTabHeader"
+           TargetType="{x:Type WpfCtrls:ImgTextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteNormal}" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoNormal}" />
+    </Style>
+
+    <Style x:Key="ImgTextBlockCabecera"
+           TargetType="{x:Type WpfCtrls:ImgTextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoNormal}" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteSmall}" />
+        <Setter Property="Background" Value="{StaticResource ColorPantallaSection}" />
+        <Setter Property="ImgAltoLeft" Value="15" />
+        <Setter Property="ImgAnchoLeft" Value="15" />
+        <Setter Property="ImgMargenLeft" Value="0,0,5,0" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <Style x:Key="TextBlocKError"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource ColorTextoError}" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="FontFamily" Value="Montserrat" />
+        <Setter Property="FontSize" Value="{StaticResource FuenteSmall}" />
+        <Setter Property="Margin" Value="{StaticResource ParrafoNormal}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <!--#endregion-->
+</ResourceDictionary>

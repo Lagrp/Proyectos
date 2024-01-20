@@ -1,0 +1,22 @@
+﻿<Application
+    x:Class="Sgcm.UI.Desktop.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Startup="ApplicationStart">
+    <!--  StartupUri="Vistas/MainView.xaml">  -->
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Recursos/Diccionarios/IUColors.xaml" />
+                <ResourceDictionary Source="/Recursos/Diccionarios/EstiloBotones.xaml" />
+                <ResourceDictionary Source="/Recursos/Diccionarios/EstiloTextos.xaml" />
+                <ResourceDictionary Source="/Recursos/Diccionarios/EstilosDatePiker.xaml" />
+                <ResourceDictionary Source="/Recursos/Diccionarios/EstiloCombos.xaml" />
+                <ResourceDictionary Source="/Recursos/Diccionarios/EstiloTabuladores.xaml" />
+                <ResourceDictionary Source="/Recursos/Diccionarios/EstiloDataGrid.xaml" />
+                <ResourceDictionary Source="/Recursos/Diccionarios/EstiloListas.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

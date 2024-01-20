@@ -1,0 +1,59 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = UI.DesktopMAUI
+build_property.ProjectDir = D:\Documents\LAGRP Soft\Proyectos\SGCM\UI.DesktopMAUI\
+
+[D:/Documents/LAGRP Soft/Proyectos/SGCM/UI.DesktopMAUI/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UI.DesktopMAUI.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/Documents/LAGRP Soft/Proyectos/SGCM/UI.DesktopMAUI/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UI.DesktopMAUI.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/Documents/LAGRP Soft/Proyectos/SGCM/UI.DesktopMAUI/Resources/Styles/EstiloBotones.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UI.DesktopMAUI.Resources.Styles.EstiloBotones.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\EstiloBotones.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\EstiloBotones.xaml
+
+[D:/Documents/LAGRP Soft/Proyectos/SGCM/UI.DesktopMAUI/Resources/Styles/EstiloTextos.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UI.DesktopMAUI.Resources.Styles.EstiloTextos.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\EstiloTextos.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\EstiloTextos.xaml
+
+[D:/Documents/LAGRP Soft/Proyectos/SGCM/UI.DesktopMAUI/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UI.DesktopMAUI.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/Documents/LAGRP Soft/Proyectos/SGCM/UI.DesktopMAUI/Resources/Styles/UIColors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UI.DesktopMAUI.Resources.Styles.UIColors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\UIColors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\UIColors.xaml
+
+[D:/Documents/LAGRP Soft/Proyectos/SGCM/UI.DesktopMAUI/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UI.DesktopMAUI.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[D:/Documents/LAGRP Soft/Proyectos/SGCM/UI.DesktopMAUI/Views/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UI.DesktopMAUI.Views.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainPage.xaml
